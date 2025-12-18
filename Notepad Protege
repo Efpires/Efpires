@@ -1,0 +1,96 @@
+HTML
+
+<div class="container">
+  <div id="card_dwwpbh" class="card">
+    <span id="title" style="color: #000000; text-align: left;">Access Point</span>
+    <div>
+      <img id="icon" src="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBmaWxsPSIjZmZmZmZmIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiNmZmZmZmYiPgoNPGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiLz4KDTxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgoNPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiPiA8dGl0bGU+Z2xvYmUxPC90aXRsZT4gPHBhdGggZD0iTTE1LjUgMmMtOC4wMDggMC0xNC41IDYuNDkyLTE0LjUgMTQuNXM2LjQ5MiAxNC41IDE0LjUgMTQuNSAxNC41LTYuNDkyIDE0LjUtMTQuNS02LjQ5Mi0xNC41LTE0LjUtMTQuNXpNMTAuNzUyIDMuODU0Yy0wLjcxNCAxLjI4OS0xLjU1OSAzLjI5NS0yLjExMyA2LjEzMWgtNC45ODNjMS41NTEtMi43OTkgNC4wNjItNC45OTMgNy4wOTYtNi4xMzF6TTMuMTU0IDEwLjk4N2g1LjMxNmMtMC4yMzQgMS40NjgtMC4zOTEgMy4xMjgtMC40MTUgNS4wMTJoLTYuMDYwYzAuMDY3LTEuNzgxIDAuNDY4LTMuNDc0IDEuMTU5LTUuMDEyek0xLjk4OCAxNy4wMDFoNi4wNzJjMC4wMjMgMS44OTMgMC4xODggMy41NDEgMC40MjIgNS4wMTJoLTUuMjljLTAuNjk0LTEuNTQzLTEuMTM4LTMuMjI0LTEuMjA0LTUuMDEyek0zLjY3IDIzLjAxNWg0Ljk3N2MwLjU1OSAyLjg2NCAxLjQxNiA0Ljg2NyAyLjEzNCA2LjE0Mi0zLjA0Ni0xLjEzNC01LjU1Ny0zLjMzNi03LjExMS02LjE0MnpNMTUuMDYyIDMwLjAwOWMtMS4wNTItMC4wMzMtMi4wNjctMC4xOTktMy4wNDUtMC40Ni0wLjc1NS0xLjIzNi0xLjczNi0zLjM2My0yLjM1Ni02LjUzNGg1LjQwMXY2Ljk5NHpNMTUuMDYyIDIyLjAxM2gtNS41NzhjLTAuMjM0LTEuNDY5LTAuMzk2LTMuMTE5LTAuNDIxLTUuMDEyaDUuOTk4djUuMDEyek0xNS4wNjIgMTUuOTk5aC02LjAwNGMwLjAyNS0xLjg4NiAwLjE4My0zLjU0MyAwLjQxNy01LjAxMmg1LjU4N3Y1LjAxMnpNMTUuMDYyIDkuOTg1aC01LjQyMmMwLjYxNS0zLjE0OCAxLjU5MS01LjI2NiAyLjM0NC02LjUyNSAwLjk4Ny0wLjI2NiAyLjAxNS0wLjQzNSAzLjA3OC0wLjQ3djYuOTk1ek0yOS4wMDMgMTUuOTk5aC01LjkzM2MtMC4wMjUtMS44ODQtMC4xODItMy41NDQtMC40MTYtNS4wMTJoNS4xNzJjMC42OTMgMS41NDEgMS4xMDggMy4yMyAxLjE3NyA1LjAxMnpNMjcuMzIyIDkuOTg1aC00LjgzN2MtMC41NDktMi44MDYtMS4zODItNC44LTIuMDkxLTYuMDkwIDIuOTY3IDEuMTU0IDUuNDAyIDMuMzM1IDYuOTI4IDYuMDkwek0xNi4wNjMgMi45ODljMS4wNjcgMC4wNDcgMi4xMDIgMC4yMTYgMy4wOTIgMC40OTMgMC43NTEgMS4yNjMgMS43MiAzLjM3MiAyLjMzMSA2LjUwM2gtNS40MjN2LTYuOTk2ek0xNi4wNjMgMTAuOTg3aDUuNTg3YzAuMjM0IDEuNDY5IDAuMzkyIDMuMTI2IDAuNDE3IDUuMDEyaC02LjAwNHYtNS4wMTJ6TTE2LjA2MyAxNy4wMDFoNS45OThjLTAuMDIzIDEuODkzLTAuMTg3IDMuNTQzLTAuNDIxIDUuMDEyaC01LjU3N3YtNS4wMTJ6TTE2LjA2MyAyOS45OTF2LTYuOTc3aDUuNDAyYy0wLjYxNyAzLjE1Mi0xLjU5MSA1LjI3MS0yLjM0MyA2LjUxMi0wLjk3OCAwLjI3Mi0yLjAwNSAwLjQxOC0zLjA1OSAwLjQ2NXpNMjAuMzY3IDI5LjExNGMwLjcxNC0xLjI3NiAxLjU2LTMuMjY2IDIuMTEyLTYuMWg0LjgzNWMtMS41MjIgMi43NjYtMy45NjcgNC45NS02Ljk0NyA2LjF6TTI3Ljc5NSAyMi4wMTNoLTUuMTUyYzAuMjM0LTEuNDcxIDAuMzk4LTMuMTE5IDAuNDIzLTUuMDEyaDUuOTI3Yy0wLjA2NyAxLjc4Ny0wLjUwOCAzLjQ2OC0xLjE5OCA1LjAxMnoiLz4gPC9nPgoNPC9zdmc+" />
+      <h3 id="value">N/A</h3>
+    </div>
+  </div>
+</div>
+
+CSS
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 2000px;
+  overflow: hidden;
+}
+.card {
+  background: #008040;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  margin: -7px;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+.card.trigger { background: #ff4444; }
+.card span {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #000000;
+  padding: 5px 10px 10px 10px;
+  text-align: left;
+}
+.card > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+.card h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31px;
+  text-align: end;
+  color: #000000;
+  padding: 0px 10px 10px 0px;
+}
+img {
+  width: 40px;
+  padding: 10px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Obrigado por usar o Monitor Craft
+   Created By Mateus Domingos
+   www.linkedin.com/in/mathews-domingos/
+*/
+
+
+JS
+
+const cardValue = htmlNode.getElementById('value');
+const card = htmlNode.getElementById('card_dwwpbh');
+const valueField = data.series[0]?.fields[1];
+if (cardValue && valueField) {
+  const length = valueField.values.length;
+  if (length > 0) {
+    const lastValue = valueField.values.get(length - 1);
+    cardValue.textContent = lastValue.toFixed(0);
+    // TRIGGER
+    card.classList.remove('trigger');
+    if (lastValue == 0) { card.classList.add('trigger'); }
+  }
+}
+
+/* Obrigado por usar o Monitor Craft
+   Created By Mateus Domingos
+   www.linkedin.com/in/mathews-domingos/
+*/
