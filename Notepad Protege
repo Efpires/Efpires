@@ -79,18 +79,19 @@ JS
 const cardValue = htmlNode.getElementById('value');
 const card = htmlNode.getElementById('card_dwwpbh');
 const valueField = data.series[0]?.fields[1];
+
 if (cardValue && valueField) {
   const length = valueField.values.length;
   if (length > 0) {
     const lastValue = valueField.values.get(length - 1);
-    cardValue.textContent = lastValue.toFixed(0);
+    
+    // Converte 1 para "UP" e 0 para "DOWN"
+    cardValue.textContent = lastValue == 1 ? 'UP' : 'DOWN';
+    
     // TRIGGER
     card.classList.remove('trigger');
-    if (lastValue == 0) { card.classList.add('trigger'); }
+    if (lastValue == 0) { 
+      card.classList.add('trigger'); 
+    }
   }
 }
-
-/* Obrigado por usar o Monitor Craft
-   Created By Mateus Domingos
-   www.linkedin.com/in/mathews-domingos/
-*/
