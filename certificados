@@ -1,0 +1,101 @@
+Dá para fazer só com host genérico, um item fixo e triggers usando now() no Zabbix 7, sim.
+
+​
+1. Criar o host genérico
+
+    Vá em Data collection → Hosts → Create host.
+
+    Nome: por exemplo Certificados_ProtegeCash.
+
+    Não associe interface nem agent; é só um host lógico.
+
+    ​
+
+2. Definir a data de validade em macro
+
+Para não mexer em expressão toda vez que renovar:
+
+    No host, aba Macros → Add.
+
+    Nome da macro: {$CERT_EXP_TS}.
+
+    Valor: timestamp Unix da data 16/06/2036 00:00 (exemplo: 2097212400; gere o epoch em qualquer site ou script).
+
+    ​
+
+    Salve o host.
+
+(Se preferir, pode colocar o epoch direto na expressão da trigger, mas com macro fica mais fácil de manter.)
+3. Criar item calculado “dias restantes”
+
+    Ainda no host, aba Items → Create item.
+
+    Name: Certificado ProtegeCash - dias restantes.
+
+    Type: Calculated.
+
+​
+
+Key: cert.days_left (qualquer identificador).
+
+Type of information: Numeric (float) ou Numeric (unsigned).
+
+Update interval: 1h (ou outro que fizer sentido).
+
+Formula:
+({$CERT_EXP_TS} - now())/86400
+Isso calcula quantos dias faltam a partir do timestamp configurado.
+
+    ​
+
+    Salve o item e aguarde ele começar a calcular (pode forçar com “Check now”).
+
+4. Criar as triggers 90 / 60 / 30 dias
+
+No mesmo host, aba Triggers → Create trigger:
+
+    Name: Certificado vence em menos de 90 dias.
+
+    Severity: por exemplo “Warning”.
+
+    Expression:
+    {Certificados_ProtegeCash:cert.days_left.last()}<90
+
+    ​
+
+    Salve.
+
+Repita criando:
+
+    Trigger 60 dias
+
+        Name: Certificado vence em menos de 60 dias.
+
+        Severity: “Average”.
+
+        Expression: {Certificados_ProtegeCash:cert.days_left.last()}<60.
+
+    Trigger 30 dias
+
+        Name: Certificado vence em menos de 30 dias.
+
+        Severity: “High” (ou o que preferir).
+
+        Expression: {Certificados_ProtegeCash:cert.days_left.last()}<30.
+
+A ordem não conflita porque, ao chegar em 29 dias, todas as três estarão verdadeiras; você decide nas ações quais severidades vão gerar notificação.
+
+​
+5. Renovação do certificado
+
+Quando renovar o certificado:
+
+    Volte ao host genérico, aba Macros.
+
+    Atualize {$CERT_EXP_TS} com o novo timestamp da data de validade.
+
+    O item calculado cert.days_left e as triggers passam automaticamente a contar a partir da nova data.
+
+    ​
+
+Se quiser, dá para montar um segundo host/itens para separar HML e PRD, usando macros distintas como {$CERT_EXP_TS_PRD} e {$CERT_EXP_TS_HML} com dois itens calculados, mantendo a mesma lógica.
