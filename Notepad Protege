@@ -1,3 +1,26 @@
+1. Host Teams (criar um por região/endpoint)
+
+Nome do Host: Teams-BR
+Interface: teams.microsoft.com (ou world.tr.teams.microsoft.com)
+Templates: Template Module ICMP Ping
+2. Itens ICMP prontos (template já cria estes)
+Item Name	Type	Key	Units	Update Interval
+ICMP Ping	Simple check	icmpping	UP/DOWN	30s
+ICMP Latency	Simple check	icmppingsec[,5,1000,128,5000,avg]	ms	60s
+ICMP Packet Loss	Simple check	icmppingloss[,5,1000,128,5000]	%	60s
+3. Item Jitter (criar manualmente)
+
+Nome: Teams Jitter
+Tipo: Calculated
+Key: teams.jitter
+Fórmula: abs(last(//ICMP Latency)-prev(//ICMP Latency))
+Units: ms
+Update: 120s
+
+
+
+
+===========================================================================================
 <div style="
   display: flex;
   align-items: center;
