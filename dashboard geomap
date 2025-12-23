@@ -1,12 +1,12 @@
 {
   "__inputs": [
     {
-      "name": "DS_MYSQL-ZABBIX",
-      "label": "MySQL-Zabbix",
+      "name": "DS_POSTGRESQL-ZABBIX",
+      "label": "PostgreSQL-Zabbix",
       "description": "",
       "type": "datasource",
-      "pluginId": "mysql",
-      "pluginName": "MySQL"
+      "pluginId": "postgres",
+      "pluginName": "PostgreSQL"
     }
   ],
   "__elements": {},
@@ -25,8 +25,8 @@
     },
     {
       "type": "datasource",
-      "id": "mysql",
-      "name": "MySQL",
+      "id": "postgres",
+      "name": "PostgreSQL",
       "version": "1.0.0"
     },
     {
@@ -62,8 +62,8 @@
   "panels": [
     {
       "datasource": {
-        "type": "mysql",
-        "uid": "${DS_MYSQL-ZABBIX}"
+        "type": "postgres",
+        "uid": "${DS_POSTGRESQL-ZABBIX}"
       },
       "gridPos": {
         "h": 3,
@@ -78,7 +78,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"display: flex; align-items: center; justify-content: space-between; background-image: url('https://beesolutions.com.br/static/grafana/fundo-bee-05.jpg'); background-size: cover; padding: 20px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n    <div style=\"flex-shrink: 0;\">\n        <img src=\"https://beesolutions.com.br/static/home/images/bee/so-logo.png\" alt=\"Logo\" style=\"width: 90px; height: 50px;\">\n    </div>\n    <h2 style=\"flex-grow: 1; text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin: 0;\">GEOMAP - BEE</h2>\n    <div style=\" text-color: #ffffff; background-color: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #333;\">\n        <a style=\"color: inherit; text-decoration: none;\" href=\"https://beesolutions.com.br\" target=\"new_blank\"> <p style=\"margin: 0;\">BEE SOLUTIUONS</p></a>\n    </div>\n</div>\n",
+        "content": "<div style=\"display: flex; align-items: center; justify-content: space-between; background-image: url('https://beesolutions.com.br/static/grafana/fundo-bee-05.jpg'); background-size: cover; padding: 20px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n <div style=\"flex-shrink: 0;\">\n <img src=\"https://beesolutions.com.br/static/home/images/bee/so-logo.png\" alt=\"Logo\" style=\"width: 90px; height: 50px;\">\n </div>\n <h2 style=\"flex-grow: 1; text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin: 0;\">GEOMAP - BEE</h2>\n <div style=\" text-color: #ffffff; background-color: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #333;\">\n <a style=\"color: inherit; text-decoration: none;\" href=\"https://beesolutions.com.br\" target=\"new_blank\"> <p style=\"margin: 0;\">BEE SOLUTIUONS</p></a>\n </div>\n</div>\n",
         "mode": "html"
       },
       "pluginVersion": "10.3.1",
@@ -86,8 +86,8 @@
         {
           "dataset": "beesoft_rp_db_01",
           "datasource": {
-            "type": "mysql",
-            "uid": "${DS_MYSQL-ZABBIX}"
+            "type": "postgres",
+            "uid": "${DS_POSTGRESQL-ZABBIX}"
           },
           "editorMode": "builder",
           "format": "table",
@@ -100,8 +100,8 @@
     },
     {
       "datasource": {
-        "type": "mysql",
-        "uid": "${DS_MYSQL-ZABBIX}"
+        "type": "postgres",
+        "uid": "${DS_POSTGRESQL-ZABBIX}"
       },
       "fieldConfig": {
         "defaults": {
@@ -221,13 +221,13 @@
         {
           "dataset": "beesoft_db_02",
           "datasource": {
-            "type": "mysql",
-            "uid": "${DS_MYSQL-ZABBIX}"
+            "type": "postgres",
+            "uid": "${DS_POSTGRESQL-ZABBIX}"
           },
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "select h.name,location_lat as lat,location_lon as lon, t.value as status, hi.notes as Notas from triggers t\r\ninner join functions f on (t.triggerid = f.triggerid)\r\ninner join items i on (f.itemid = i.itemid)\r\ninner join hosts h on (i.hostid = h.hostid)\r\ninner join hosts_groups hg on (h.hostid = hg.hostid)\r\ninner join host_inventory hi on (h.hostid = hi.hostid)\r\nwhere t.description like '%Una%';",
+          "rawSql": "SELECT h.name,location_lat AS lat,location_lON AS lon, t.value AS status, hi.notes AS NotAS FROM triggers t\r\nINNER JOIN functions f ON (t.triggerid = f.triggerid)\r\nINNER JOIN items i ON (f.itemid = i.itemid)\r\nINNER JOIN hosts h ON (i.hostid = h.hostid)\r\nINNER JOIN hosts_groups hg ON (h.hostid = hg.hostid)\r\nINNER JOIN host_inventory hi ON (h.hostid = hi.hostid)\r\nWHERE t.descriptiON LIKE '%Una%';",
           "refId": "A",
           "sql": {
             "columns": [
@@ -273,4 +273,3 @@
   "uid": "f56995ed-30e3-435e-880c-f10f18a3fbde",
   "version": 2,
   "weekStart": ""
-}
