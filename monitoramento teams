@@ -1,3 +1,9 @@
+abs(
+ last(/Teams-Matriz-ICMP/icmppingsec[,5,1000,128,5000,avg])
+ -last(/Teams-Matriz-ICMP/icmppingsec[,5,1000,128,5000,avg],#2)
+)
+
+
 Aqui está a solução completa e pronta para copiar/colar no Zabbix para monitorar Microsoft Teams via ICMP com latência, jitter, packet loss e tendências históricas.
 
 ​
