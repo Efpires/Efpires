@@ -1,91 +1,34 @@
-stddevpop(/"Teams - Consolidacao"/icmppingsec[,5,1000,128,5000,avg],5m)
+1. Delete o item "ICMP Jitter" atual
+2. Crie novo item assim:
 
+    Name: ICMP Jitter
 
+    Type: Dependent item ✅ (não Calculated!)
 
-Aqui está a solução completa e pronta para copiar/colar no Zabbix para monitorar Microsoft Teams via ICMP com latência, jitter, packet loss e tendências históricas.
+    Key: icmp.jitter
 
-​
-1. Host Teams (criar um por região/endpoint)
+    Master item: Selecione ICMP latency (o icmppingsec do seu host)
 
-Nome do Host: Teams-BR
-Interface: teams.microsoft.com (ou world.tr.teams.microsoft.com)
-Templates: Template Module ICMP Ping
-2. Itens ICMP prontos (template já cria estes)
-Item Name	Type	Key	Units	Update Interval
-ICMP Ping	Simple check	icmpping	UP/DOWN	30s
-ICMP Latency	Simple check	icmppingsec[,5,1000,128,5000,avg]	ms	60s
-ICMP Packet Loss	Simple check	icmppingloss[,5,1000,128,5000]	%	60s
-3. Item Jitter (criar manualmente)
+    Type of information: Numeric (float)
 
-Nome: Teams Jitter
-Tipo: Calculated
-Key: teams.jitter
-Fórmula: abs(last(//ICMP Latency)-prev(//ICMP Latency))
-Units: ms
-Update: 120s
-4. Gráficos prontos (Latest Data → Graph)
+    Units: ms
 
-Gráfico 1 - Qualidade Rede Teams:
+3. Na aba Preprocessing, adicione:
 
-text
-Items:
-- ICMP Latency (eixo esquerdo, linha azul)
-- Teams Jitter (eixo esquerdo, linha vermelha) 
-- ICMP Packet Loss (eixo direito, linha preta)
+Step 1:
 
-Gráfico 2 - Tendência Histórica (7 dias):
+    Type: JavaScript
 
-text
-Mesmo itens com período "1w" no dashboard
+    Parameters:
 
-5. Triggers (alertas automáticos)
-Trigger Name	Severity	Expression
-Teams DOWN	High	{Teams-BR:icmpping.nodata(5m)}=1
-Latência Alta	Warning	{Teams-BR:ICMP Latency.last()}>200
-Packet Loss >5%	Average	{Teams-BR:ICMP Packet Loss.avg(5m)}>5
-Jitter Alto	Warning	{Teams-BR:teams.jitter.last()}>50
-6. Dashboard pronto (copie este JSON)
-
-json
-{
-  "name": "Teams ICMP Monitoring",
-  "widgets": [
-    {
-      "type": "graph",
-      "items": ["ICMP Latency", "Teams Jitter", "ICMP Packet Loss"]
-    },
-    {
-      "type": "problems",
-      "host": "Teams-BR"
-    }
-  ]
+javascript
+if (typeof prev_value === 'undefined') {
+    return value;
 }
+return Math.abs(value - prev_value);
 
-7. Configurações de Histórico (para tendências)
+Step 2:
 
-Em Administration → General → Housekeeping:
+    Type: Simple change
 
-text
-- ICMP Latency: History 30d, Trends 365d
-- ICMP Packet Loss: History 90d, Trends 365d  
-- Teams Jitter: History 30d, Trends 365d
-
-Deploy em 5 minutos
-
-    ✅ Crie Host Teams-BR → Interface teams.microsoft.com
-
-    ✅ Link Template Template Module ICMP Ping
-
-    ✅ Crie item Teams Jitter (fórmula acima)
-
-    ✅ Crie 2 gráficos no Latest Data
-
-    ✅ Crie 4 triggers (copie expressões)
-
-    ✅ History storage 30-90 dias
-
-Resultado: Dashboard com latência/jitter/packet loss em tempo real + histórico 1 ano + alertas automáticos.
-
-​
-
-Essa solução é 100% nativa Zabbix, sem scripts externos, e monitora os endpoints oficiais Teams. Seu cliente terá exatamente o que pediu.
+    (deixe vazio)
