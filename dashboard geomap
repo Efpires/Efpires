@@ -1,0 +1,276 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_MYSQL-ZABBIX",
+      "label": "MySQL-Zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "mysql",
+      "pluginName": "MySQL"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "geomap",
+      "name": "Geomap",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.3.1"
+    },
+    {
+      "type": "datasource",
+      "id": "mysql",
+      "name": "MySQL",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Desenvolvido por: Bee Solutions\nAutor: Fernando Almondes\nhttps://t.me/beesolutions",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-ZABBIX}"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"display: flex; align-items: center; justify-content: space-between; background-image: url('https://beesolutions.com.br/static/grafana/fundo-bee-05.jpg'); background-size: cover; padding: 20px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n    <div style=\"flex-shrink: 0;\">\n        <img src=\"https://beesolutions.com.br/static/home/images/bee/so-logo.png\" alt=\"Logo\" style=\"width: 90px; height: 50px;\">\n    </div>\n    <h2 style=\"flex-grow: 1; text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin: 0;\">GEOMAP - BEE</h2>\n    <div style=\" text-color: #ffffff; background-color: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #333;\">\n        <a style=\"color: inherit; text-decoration: none;\" href=\"https://beesolutions.com.br\" target=\"new_blank\"> <p style=\"margin: 0;\">BEE SOLUTIUONS</p></a>\n    </div>\n</div>\n",
+        "mode": "html"
+      },
+      "pluginVersion": "10.3.1",
+      "targets": [
+        {
+          "dataset": "beesoft_rp_db_01",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-ZABBIX}"
+          },
+          "editorMode": "builder",
+          "format": "table",
+          "rawSql": "",
+          "refId": "A"
+        }
+      ],
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "dark-red",
+                "value": 1
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 21,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 1,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": true,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "status",
+                  "fixed": "dark-green"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 10,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "field": "name",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 20,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "top"
+                }
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Status",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lat": -51.25126,
+          "lon": -17.07362,
+          "zoom": 15
+        }
+      },
+      "pluginVersion": "10.3.1",
+      "targets": [
+        {
+          "dataset": "beesoft_db_02",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-ZABBIX}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select h.name,location_lat as lat,location_lon as lon, t.value as status, hi.notes as Notas from triggers t\r\ninner join functions f on (t.triggerid = f.triggerid)\r\ninner join items i on (f.itemid = i.itemid)\r\ninner join hosts h on (i.hostid = h.hostid)\r\ninner join hosts_groups hg on (h.hostid = hg.hostid)\r\ninner join host_inventory hi on (h.hostid = hi.hostid)\r\nwhere t.description like '%Una%';",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "geomap"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [
+    "bee",
+    "solutions",
+    "geomap",
+    "fernandoalmondes"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dashboard Geomap - BEE",
+  "uid": "f56995ed-30e3-435e-880c-f10f18a3fbde",
+  "version": 2,
+  "weekStart": ""
+}
