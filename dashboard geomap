@@ -78,7 +78,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"display: flex; align-items: center; justify-content: space-between; background-image: url('https://beesolutions.com.br/static/grafana/fundo-bee-05.jpg'); background-size: cover; padding: 20px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n <div style=\"flex-shrink: 0;\">\n <img src=\"https://beesolutions.com.br/static/home/images/bee/so-logo.png\" alt=\"Logo\" style=\"width: 90px; height: 50px;\">\n </div>\n <h2 style=\"flex-grow: 1; text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin: 0;\">GEOMAP - BEE</h2>\n <div style=\" text-color: #ffffff; background-color: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #333;\">\n <a style=\"color: inherit; text-decoration: none;\" href=\"https://beesolutions.com.br\" target=\"new_blank\"> <p style=\"margin: 0;\">BEE SOLUTIUONS</p></a>\n </div>\n</div>\n",
+        "content": "<div style=\"display: flex; align-items: center; justify-content: space-between; background-image: url('https://beesolutions.com.br/static/grafana/fundo-bee-05.jpg'); background-size: cover; padding: 20px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n    <div style=\"flex-shrink: 0;\">\n        <img src=\"https://beesolutions.com.br/static/home/images/bee/so-logo.png\" alt=\"Logo\" style=\"width: 90px; height: 50px;\">\n    </div>\n    <h2 style=\"flex-grow: 1; text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin: 0;\">GEOMAP - BEE</h2>\n    <div style=\" text-color: #ffffff; background-color: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #333;\">\n        <a style=\"color: inherit; text-decoration: none;\" href=\"https://beesolutions.com.br\" target=\"new_blank\"> <p style=\"margin: 0;\">BEE SOLUTIUONS</p></a>\n    </div>\n</div>\n",
         "mode": "html"
       },
       "pluginVersion": "10.3.1",
@@ -227,7 +227,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT h.name,location_lat AS lat,location_lON AS lon, t.value AS status, hi.notes AS NotAS FROM triggers t\r\nINNER JOIN functions f ON (t.triggerid = f.triggerid)\r\nINNER JOIN items i ON (f.itemid = i.itemid)\r\nINNER JOIN hosts h ON (i.hostid = h.hostid)\r\nINNER JOIN hosts_groups hg ON (h.hostid = hg.hostid)\r\nINNER JOIN host_inventory hi ON (h.hostid = hi.hostid)\r\nWHERE t.descriptiON LIKE '%Una%';",
+          "rawSql": "SELECT h.name, location_lat AS lat, location_lon AS lon, t.value AS status, hi.notes AS Notas FROM triggers t\nINNER JOIN functions f ON (t.triggerid = f.triggerid)\nINNER JOIN items i ON (f.itemid = i.itemid)\nINNER JOIN hosts h ON (i.hostid = h.hostid)\nINNER JOIN hosts_groups hg ON (h.hostid = hg.hostid)\nINNER JOIN host_inventory hi ON (h.hostid = hi.hostid)\nWHERE t.description LIKE '%Una%';",
           "refId": "A",
           "sql": {
             "columns": [
@@ -273,3 +273,4 @@
   "uid": "f56995ed-30e3-435e-880c-f10f18a3fbde",
   "version": 2,
   "weekStart": ""
+}
