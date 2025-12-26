@@ -1,4 +1,3 @@
-
 SELECT DISTINCT
   REPLACE(h.name, 'Firewall ', '') AS name,
   hi.location_lat AS lat,
@@ -16,7 +15,9 @@ WHERE
   g.name LIKE 'Protege/Seguranca/Firewall/%'
   AND t.description ILIKE '%Una%'
   AND h.name NOT ILIKE '%AWS ProtegeCash%'   -- remove AWS ProtegeCash 01/02/VPN
-  AND h.name NOT ILIKE '%Datacenter%';       -- remove Firewall Datacenter
+  AND h.name NOT ILIKE '%Datacenter%'        -- remove Firewall Datacenter
+  AND h.name NOT ILIKE '%Nova Campinas%';    -- remove Firewall Nova Campinas
+
 
 ====================================================================
 
