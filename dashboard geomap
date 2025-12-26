@@ -1,118 +1,23 @@
 
-consolacao
--23.549543141562353, -46.65082221534237
+SELECT DISTINCT
+  REPLACE(h.name, 'Firewall ', '') AS name,
+  hi.location_lat AS lat,
+  hi.location_lon AS lon,
+  t.value AS status,
+  hi.notes AS Notas
+FROM triggers t
+INNER JOIN functions f       ON t.triggerid = f.triggerid
+INNER JOIN items i           ON f.itemid = i.itemid
+INNER JOIN hosts h           ON i.hostid = h.hostid
+INNER JOIN hosts_groups hg   ON h.hostid = hg.hostid
+INNER JOIN hstgrp g          ON hg.groupid = g.groupid
+INNER JOIN host_inventory hi ON h.hostid = hi.hostid
+WHERE
+  g.name LIKE 'Protege/Seguranca/Firewall/%'
+  AND t.description ILIKE '%Una%'
+  AND h.name NOT ILIKE '%AWS ProtegeCash%'   -- remove AWS ProtegeCash 01/02/VPN
+  AND h.name NOT ILIKE '%Datacenter%';       -- remove Firewall Datacenter
 
-
-goiania
--16.68819845739346, -49.26878689753346
-
-guarapuava
--25.38394083623535, -51.454725249762646
-
-jaguariuna
--22.705106926619823, -46.981359187274236
-
-ji-parana
--10.872563920355434, -61.95748302699386
-
-juiz de fora
--21.761246531447572, -43.346475077974254
-
-londrina
--23.320312180843473, -51.16782585917515
-
-maringa
--23.419713501343534, -51.93868864199697
-
-muriaé
--21.12960925848836, -42.3703782394589
-
-nova campinas
-??????????????
-
-floripa
--27.593116156053284, -48.52388270518216
-
-palmas
--10.249238473045198, -48.32766815585808
-
-passo fundo
--28.264283696120444, -52.40385450240164
-
-pelotas
--31.77237124185869, -52.324675863494235
-
-porto alegre
--30.038694656277197, -51.21725805901599
-
-porto velho
--8.763838750028073, -63.90486111188852
-
-pres prudente
--22.120775804728613, -51.3902010462968
-
-provig barra funda
--23.519834466443783, -46.67502458999999
-
-ribeirao preto
--21.169608284346396, -47.79732550091481
-
-rio branco
--9.973734004578088, -67.80501340886266
-
-rio verde
--17.790095441467816, -50.919240652237704
-
-rondonopolis
--16.46607786353836, -54.6403095935597
-
-sta cruz do sul
--29.713290965373982, -52.42543724412526
-
-sto andre
--23.688448391190118, -46.493578396129
-
-santos
--23.959897968549917, -46.33221573470051
-
-sao jose dos campos
--23.215304936282806, -45.89118548400015
-
-fazenda sao cristovao
--12.768461525263305, -52.224560817765074
-
-fazenda jaguariuna
--23.173638733989204, -45.95061162587111
-
-sao jose do rio preto
--20.792521549082473, -49.36025559246643
-
-sao jose dos campos
--23.209305904578393, -45.88471278815881
-
-sao sebastiao
--23.800531002487276, -45.41244749025967
-
-serra
--20.202624390460205, -40.26612601771727
-
-sorocaba
--23.49011922863009, -47.47998934452299
-
-uberlandia
--18.9070097028183, -48.2938924104279
-
-varginha
--21.58733838333741, -45.43598996546069
-
-vilhena
--12.743103525308657, -60.1422387809841
-
-vitoria
--12.74309306073586, -60.142431900024725
-
-volta redonda
--22.52596981497232, -44.13097860961549
 ====================================================================
 
 SELECT DISTINCT
