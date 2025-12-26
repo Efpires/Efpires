@@ -111,7 +111,7 @@ volta redonda
 ====================================================================
 
 SELECT DISTINCT
-  REPLACE(h.name, 'Firewall', '') AS name_sem_firewall,
+  REPLACE(h.name, 'Firewall ', '') AS name,
   hi.location_lat AS lat,
   hi.location_lon AS lon,
   t.value AS status,
@@ -126,6 +126,7 @@ INNER JOIN host_inventory hi ON h.hostid = hi.hostid
 WHERE
   g.name LIKE 'Protege/Seguranca/Firewall/%'
   AND t.description ILIKE '%Una%';
+
 
 
 
