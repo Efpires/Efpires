@@ -17,3 +17,12 @@ Nesse contexto me mostre como vai ficar a expression (avg(/ARA-FWL-01/net.if.in[
 avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m)>({$IF.UTIL.MAX:"1200"}/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])) and
 last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])>0, com essa alteração. e a recovery tbm avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m)<(({$IF.UTIL.MAX:"1200"}-3)/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200]) and
 avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m)<(({$IF.UTIL.MAX:"1200"}-3)/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])
+
+
+
+
+
+Preciso alterar minhas triggers desse padrão. contexto:
+o valor do ifHighSpeed.1200 é o valor da velocidade da interface e preciso que essa trigger alarme com o uso de banda do link. ex:
+velocidade da interface 2Gbps
+velocidade contratada do link 300Mbps
