@@ -1,28 +1,15 @@
-(avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m)>({$IF.UTIL.MAX:"1200"}/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200]) or
-avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m)>({$IF.UTIL.MAX:"1200"}/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])) and
-last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])>0
-
-
-nessa chave de trigger o que diz o valor da interface é a key ifHighSpeed.1200?
-
-
-
-
-vou seguir na alteração das triggers mesmo, seguirei assim:
-1 criar 1 macro para cada link do firewall ex: $LINK1.SPEED
-
-2 alterar o parametro necessario em cada trigger
-
-Nesse contexto me mostre como vai ficar a expression (avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m)>({$IF.UTIL.MAX:"1200"}/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200]) or
-avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m)>({$IF.UTIL.MAX:"1200"}/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])) and
-last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])>0, com essa alteração. e a recovery tbm avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m)<(({$IF.UTIL.MAX:"1200"}-3)/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200]) and
-avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m)<(({$IF.UTIL.MAX:"1200"}-3)/100)*last(/ARA-FWL-01/net.if.speed[ifHighSpeed.1200])
+(
+  avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m) > ({$IF.UTIL.MAX:"1200"}/100)*{$LINK1.SPEED}
+  or
+  avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m) > ({$IF.UTIL.MAX:"1200"}/100)*{$LINK1.SPEED}
+)
+ and
+ {$LINK1.SPEED} > 0
 
 
 
 
+avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m) < (({$IF.UTIL.MAX:"1200"}-3)/100)*{$LINK1.SPEED}
+ and
+avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m) < (({$IF.UTIL.MAX:"1200"}-3)/100)*{$LINK1.SPEED}
 
-Preciso alterar minhas triggers desse padrão. contexto:
-o valor do ifHighSpeed.1200 é o valor da velocidade da interface e preciso que essa trigger alarme com o uso de banda do link. ex:
-velocidade da interface 2Gbps
-velocidade contratada do link 300Mbps
