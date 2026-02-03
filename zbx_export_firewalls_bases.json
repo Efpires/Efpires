@@ -1,0 +1,2598 @@
+{
+    "zabbix_export": {
+        "version": "7.0",
+        "host_groups": [
+            {
+                "uuid": "032b2728df0f47fb8379be0c3a85acd1",
+                "name": "Protege/Ara\u00e7atuba"
+            },
+            {
+                "uuid": "5f11698afe5d4392a9e610ad6b65e701",
+                "name": "Protege/Barbacena"
+            },
+            {
+                "uuid": "f835dba04e9c4eadbcccd0f17d7587a9",
+                "name": "Protege/Bauru"
+            },
+            {
+                "uuid": "1893c0bda2ae478780a4f04b00642a14",
+                "name": "Protege/Belo Horizonte"
+            },
+            {
+                "uuid": "fc2a42283c9a47ae843a3c8a44396d8b",
+                "name": "Protege/Brasilia"
+            },
+            {
+                "uuid": "40b67d739e98492d9f4c086ead056ac3",
+                "name": "Protege/Campinas"
+            },
+            {
+                "uuid": "39d49e3f89a240a9b0ffd7e46769f854",
+                "name": "Protege/Campo Grande"
+            },
+            {
+                "uuid": "5b07b9212ffe4c2a896b20f5a90124b1",
+                "name": "Protege/Cascavel"
+            },
+            {
+                "uuid": "b80c8069c49e44cf93a9d0567d617c4d",
+                "name": "Protege/Caxias do Sul"
+            },
+            {
+                "uuid": "69694dd4772a4cb9b7bee209ae1fd98d",
+                "name": "Protege/Cruzeiro do sul"
+            },
+            {
+                "uuid": "036d80e8bf3c4569a535f864b802ba52",
+                "name": "Protege/Cuiaba"
+            },
+            {
+                "uuid": "fafbe4f166d541aabc46b4b99ce6fa03",
+                "name": "Protege/Curitiba"
+            },
+            {
+                "uuid": "939ffa0aee14409cb3a7ffc642504229",
+                "name": "Protege/Fazenda Jaguari\u00fana"
+            },
+            {
+                "uuid": "0909d662cf5f4d60b650007c1924bed9",
+                "name": "Protege/Fazenda Sao Sebastiao"
+            },
+            {
+                "uuid": "7ff38c1d75fa4276ab4310086ce3bec5",
+                "name": "Protege/Foz do Igua\u00e7u"
+            },
+            {
+                "uuid": "12338366d03c4b38867a28b02c194d44",
+                "name": "Protege/Goiania"
+            },
+            {
+                "uuid": "7fc8126684964a36b2a975a5a1fe4e7a",
+                "name": "Protege/Guarapuava"
+            },
+            {
+                "uuid": "344365ebd468454c80fa60ebf69eb07f",
+                "name": "Protege/Ji-Paran\u00e1"
+            },
+            {
+                "uuid": "93f55bc12aac43559713895564d065aa",
+                "name": "Protege/Juiz de Fora"
+            },
+            {
+                "uuid": "2d7cfa07d0cd4ee081dd5b1dae705e38",
+                "name": "Protege/Londrina"
+            },
+            {
+                "uuid": "80dc4b1a23a24ff292007280edbecd77",
+                "name": "Protege/Maringa"
+            },
+            {
+                "uuid": "60bbeb00f66349c8b01c4e6522409f30",
+                "name": "Protege/Muria\u00e9"
+            },
+            {
+                "uuid": "37b0519e81fd4e94952290e96f002d60",
+                "name": "Protege/Nova Campinas"
+            },
+            {
+                "uuid": "de387cc6e34d4a4f9a47557d1bb4aa83",
+                "name": "Protege/Nova Florian\u00f3polis"
+            },
+            {
+                "uuid": "22ed92e46d2542f1ab7136d578fab2f7",
+                "name": "Protege/Palmas"
+            },
+            {
+                "uuid": "30d98e592bd34a708ebb88e1def148f7",
+                "name": "Protege/Passo Fundo"
+            },
+            {
+                "uuid": "ba06ecf468d84b36bcae1688e5f076e3",
+                "name": "Protege/Pelotas"
+            },
+            {
+                "uuid": "3778490fe3924d80ad1080b68bca9a47",
+                "name": "Protege/Porto Alegre"
+            },
+            {
+                "uuid": "898fab15c10b4e65be572a80248b1d0b",
+                "name": "Protege/Porto Velho"
+            },
+            {
+                "uuid": "2bb790d786ef428c865e20e0529c3059",
+                "name": "Protege/Presidente Prudente"
+            },
+            {
+                "uuid": "ef53dd514e4b47c0b38f14570a67027b",
+                "name": "Protege/Provig"
+            },
+            {
+                "uuid": "2c95366130824bd58fd983a2ebd0a37e",
+                "name": "Protege/Ribeir\u00e3o Preto"
+            },
+            {
+                "uuid": "329c0d88ba1f4a89ac00064da620f607",
+                "name": "Protege/Rio Branco"
+            },
+            {
+                "uuid": "6f38c3afe2424bbc8dd95f5921079443",
+                "name": "Protege/Rio Verde"
+            },
+            {
+                "uuid": "a9e9f7d563af4931b5f7f36d6c7cb491",
+                "name": "Protege/Santa Cruz do Sul"
+            },
+            {
+                "uuid": "b5e0b804d2954512bc5362881f243441",
+                "name": "Protege/Santo Andre"
+            },
+            {
+                "uuid": "e208d1387a884f3486d28c93c7449e20",
+                "name": "Protege/Santos"
+            },
+            {
+                "uuid": "20d9f47b2ca34f3dac7510ddcb49e15a",
+                "name": "Protege/Seguranca/Firewall/Bases"
+            },
+            {
+                "uuid": "4b7080ef837743eeb0aeb667f32553be",
+                "name": "Protege/Serra"
+            },
+            {
+                "uuid": "8ec693218ee94394b098906eaa1be88b",
+                "name": "Protege/Sorocaba"
+            },
+            {
+                "uuid": "0027c8c9c4dc491ca629d7c562390d5c",
+                "name": "Protege/S\u00e3o Cristov\u00e3o"
+            },
+            {
+                "uuid": "1be22fcd7c9b4717b10a9e1446a54a34",
+                "name": "Protege/S\u00e3o Jos\u00e9 do Rio Preto"
+            },
+            {
+                "uuid": "8cc8b8625cd24a0aa5b4f21bc93a6e98",
+                "name": "Protege/S\u00e3o Jos\u00e9 dos Campos"
+            },
+            {
+                "uuid": "1a3e9ddee796446494519b7825974180",
+                "name": "Protege/Uberl\u00e2ndia"
+            },
+            {
+                "uuid": "f8f443870aa941f59332e4a1de9bc40c",
+                "name": "Protege/Varginha"
+            },
+            {
+                "uuid": "30a23d848aa14b5ea5971805d368b34c",
+                "name": "Protege/Vilhena"
+            },
+            {
+                "uuid": "ef71e57107ab40a69d674ae54596d9c3",
+                "name": "Protege/Vitoria"
+            },
+            {
+                "uuid": "6afe9e20bce64750bedf4119df2eac39",
+                "name": "Protege/Volta Redonda"
+            }
+        ],
+        "hosts": [
+            {
+                "host": "ARA-FWL-01",
+                "name": "Firewall Aracatuba",
+                "description": "Firewall Fortinet Ara\u00e7atuba\n\n\n10.12.3.1",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Ara\u00e7atuba"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.12.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$LINK1.SPEED}",
+                        "value": "10000000"
+                    },
+                    {
+                        "macro": "{$LINK2.SPEED}",
+                        "value": "20000000"
+                    },
+                    {
+                        "macro": "{$LINK3.SPEED}",
+                        "value": "40000000"
+                    },
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "ACT-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QX4",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QX4",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.206623266450",
+                    "location_lon": "-50.442996788378"
+                }
+            },
+            {
+                "host": "BAR-FWL-01",
+                "name": "Firewall Barbacena",
+                "description": "Firewall Fortinet Barbacena",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Barbacena"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.61.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$LINK1.SPEED}",
+                        "value": "10000000"
+                    },
+                    {
+                        "macro": "{$LINK2.SPEED}",
+                        "value": "20000000"
+                    },
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "BBC-FW-02.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099FDR",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099FDR",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.221451784392",
+                    "location_lon": "-43.773160186966"
+                }
+            },
+            {
+                "host": "BAU-FWL-01",
+                "name": "Firewall Bauru",
+                "description": "Firewall Fortinet Bauru",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Bauru"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.13.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "BAR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209E5H1",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209E5H1",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-22.314836163543",
+                    "location_lon": "-49.068235672771"
+                }
+            },
+            {
+                "host": "BHE-FWL-01",
+                "name": "Firewall Belo Horizonte",
+                "description": "Firewall Fortinet Belo Horizonte",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Belo Horizonte"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.8.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "BHE-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT80FTK22049749",
+                    "hardware_full": "Fortinet FGT_80F, HW Serial#: FGT80FTK22049749",
+                    "software_full": "Fortinet Firewall FortiGate-80F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-19.919805613407",
+                    "location_lon": "-43.948260619367"
+                }
+            },
+            {
+                "host": "BSA-FWL-01",
+                "name": "Firewall Brasilia",
+                "description": "Firewall Fortinet Brasilia",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Brasilia"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.20.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "BSA-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QB5",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QB5",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-15.798218675036",
+                    "location_lon": "-47.891818502965"
+                }
+            },
+            {
+                "host": "CAS-FWL-01",
+                "name": "Firewall Cascavel",
+                "description": "Firewall Cascavel",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Cascavel"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.21.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CCV-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099Q9A",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099Q9A",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-24.954663242446",
+                    "location_lon": "-53.475645279597"
+                }
+            },
+            {
+                "host": "CAX-FWL-01",
+                "name": "Firewall Caxias do Sul",
+                "description": "Firewall Fortinet Caxias do Sul",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Caxias do Sul"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.32.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CDS-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QJB",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QJB",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-29.172678398806",
+                    "location_lon": "-51.174885018616"
+                }
+            },
+            {
+                "host": "CGE-FWL-01",
+                "name": "Firewall Campo Grande",
+                "description": "Firewall Fortinet Campo  Grande",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Campo Grande"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.41.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CGD-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099R8Q",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099R8Q",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-20.465641727306",
+                    "location_lon": "-54.632104122491"
+                }
+            },
+            {
+                "host": "CPH-FWL-01",
+                "name": "Firewall Nova Campinas",
+                "description": "Firewall Fortinet Nova Campinas",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Nova Campinas"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.71.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "NCAM-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209DP8G",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209DP8G",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)"
+                },
+                "inventory_mode": "AUTOMATIC"
+            },
+            {
+                "host": "CPN-FWL-01",
+                "name": "Firewall Campinas",
+                "description": "Firewall Fortinet Campinas",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Campinas"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.10.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CPN-FW-01.dprotege.com.br",
+                    "os": "v7.0.18,build0695,251104 (GA.M)",
+                    "os_short": "v7.0.18,build0695,251104 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GJRL",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GJRL",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.0.18,build0695,251104 (GA.M)",
+                    "location_lat": "-22.913854331403",
+                    "location_lon": "-47.055548014405"
+                }
+            },
+            {
+                "host": "CRU-FWL-01",
+                "name": "Firewall Cruzeiro do Sul",
+                "description": "Firewall Fortinet Cruzeiro do Sul",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Cruzeiro do sul"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.35.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CRS-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099Q2K",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099Q2K",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-7.6364018370134",
+                    "location_lon": "-72.670199582145"
+                }
+            },
+            {
+                "host": "CUI-FWL-01",
+                "name": "Firewall Cuiaba",
+                "description": "Firewall Fortinet Cuiaba",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Cuiaba"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.40.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CBA-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22098052",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22098052",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-15.595874547728",
+                    "location_lon": "-56.090201742784"
+                }
+            },
+            {
+                "host": "CUR-FWL-01",
+                "name": "Firewall Curitiba",
+                "description": "Firewall Fortinet Curitiba",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Curitiba"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.9.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "CUR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT80FTK22050066",
+                    "hardware_full": "Fortinet FGT_80F, HW Serial#: FGT80FTK22050066",
+                    "software_full": "Fortinet Firewall FortiGate-80F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-25.426828774890",
+                    "location_lon": "-49.276764587159"
+                }
+            },
+            {
+                "host": "Firewall Laboratorio Homologacao",
+                "name": "Firewall Laboratorio Homologacao",
+                "description": "Firewall Homolog SI\n\nEst\u00e1 sendo usando para simular o ambiente.\n\nTrata-se de um servidor de Laborat\u00f3rio em casos de alerta n\u00e3o precisa acionar ningu\u00e9m.",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Module ICMP Ping"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.3.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "LAB-FW-01.dprotege.com.br",
+                    "os": "v7.2.10,build1706,240918 (GA.M)",
+                    "os_short": "v7.2.10,build1706,240918 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GJ8Q",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GJ8Q",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.2.10,build1706,240918 (GA.M)"
+                },
+                "inventory_mode": "AUTOMATIC"
+            },
+            {
+                "host": "FNP2-FWL-01",
+                "name": "Firewall Nova Florianopolis",
+                "description": "Firewall Fortinet Nova Florianopolis",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Nova Florian\u00f3polis"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.74.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "FNP2-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QBV",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QBV",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-27.593116156053",
+                    "location_lon": "-48.523882705182"
+                }
+            },
+            {
+                "host": "FOZ-FWL-01",
+                "name": "Firewall Foz do Iguacu",
+                "description": "Firewall Fortinet Foz do Iguacu",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Foz do Igua\u00e7u"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.36.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "FDI-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099PF5",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099PF5",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-25.516900898844",
+                    "location_lon": "-54.581741245367"
+                }
+            },
+            {
+                "host": "GNA-FWL-01",
+                "name": "Firewall Goiania",
+                "description": "Firewall Fortinet Goiania",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Goiania"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.30.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "GNA-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT80FTK22042505",
+                    "hardware_full": "Fortinet FGT_80F, HW Serial#: FGT80FTK22042505",
+                    "software_full": "Fortinet Firewall FortiGate-80F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-16.688198457393",
+                    "location_lon": "-49.268786897533"
+                }
+            },
+            {
+                "host": "GUA-FWL-01",
+                "name": "Firewall Guarapuava",
+                "description": "Firewall Fortinet Guarapuava",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Guarapuava"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.22.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "GPV-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QP1",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QP1",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-25.383940836235",
+                    "location_lon": "-51.454725249762"
+                }
+            },
+            {
+                "host": "JAR-FWL-01",
+                "name": "Firewall Jaguariuna",
+                "description": "Firewall Fortinet Jaguariuna\n\nStarlink (Lan2)\n\nBanda Larga (Lan3)\n\nDedicado (Wan)",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Fazenda Jaguari\u00fana"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.62.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "JAR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099RCW",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099RCW",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.173638733989",
+                    "location_lon": "-45.950611625871"
+                }
+            },
+            {
+                "host": "JFO-FWL-01",
+                "name": "Firewall Juiz de Fora",
+                "description": "Firewall Fortinet Juiz de Fora",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Juiz de Fora"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.31.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "JDF-FW-02.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209E83R",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209E83R",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.761246531447",
+                    "location_lon": "-43.346475077974"
+                }
+            },
+            {
+                "host": "JPR-FWL-01",
+                "name": "Firewall Ji-Parana",
+                "description": "Firewall Fortinet Ji-Parana",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Ji-Paran\u00e1"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.55.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "JPR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099V01",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099V01",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-10.872563920355",
+                    "location_lon": "-61.957483026993"
+                }
+            },
+            {
+                "host": "LON-FWL-01",
+                "name": "Firewall Londrina",
+                "description": "Firewall Fortinet Londrina",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Londrina"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.23.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "LDN-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209DXMJ",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209DXMJ",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.320312180843",
+                    "location_lon": "-51.167825859175"
+                }
+            },
+            {
+                "host": "MAR-FWL-01",
+                "name": "Firewall Maringa",
+                "description": "Firewall Fortinet Maringa",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Maringa"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.24.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "MRG-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099S28",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099S28",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.419713501343",
+                    "location_lon": "-51.938688641996"
+                }
+            },
+            {
+                "host": "MUR-FWL-01",
+                "name": "Firewall Muriae",
+                "description": "Firewall Fortinet Muriae",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Muria\u00e9"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.60.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "MUR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099S50",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099S50",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.129609258488",
+                    "location_lon": "-42.370378239458"
+                }
+            },
+            {
+                "host": "PAL-FWL-01",
+                "name": "Firewall Palmas",
+                "description": "Firewall Fortinet Palmas",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Palmas"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.19.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PMS-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099S6H",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099S6H",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-10.249238473045",
+                    "location_lon": "-48.327668155858"
+                }
+            },
+            {
+                "host": "PEL-FWL-01",
+                "name": "Firewall Pelotas",
+                "description": "Firewall Fortinet Pelotas",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Pelotas"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.27.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PLT-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099SY8",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099SY8",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-31.772371241858",
+                    "location_lon": "-52.324675863494"
+                }
+            },
+            {
+                "host": "PFO-FWL-01",
+                "name": "Firewall Passo Fundo",
+                "description": "Firewall Fortinet Passo Fundo",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Passo Fundo"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.49.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PFD-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099SBH",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099SBH",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-28.264283696120",
+                    "location_lon": "-52.403854502401"
+                }
+            },
+            {
+                "host": "POA-FWL-01",
+                "name": "Firewall Porto Alegre",
+                "description": "Firewall Porto Alegre",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Porto Alegre"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.28.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PAE-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GJ7A",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GJ7A",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-30.038694656277",
+                    "location_lon": "-51.217258059015"
+                }
+            },
+            {
+                "host": "PRE-FWL-01",
+                "name": "Firewall Presidente Prudente",
+                "description": "Firewall Fortinet Presidente Prudente",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Presidente Prudente"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.14.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PPR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099PYC",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099PYC",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-22.120775804728",
+                    "location_lon": "-51.390201046296"
+                }
+            },
+            {
+                "host": "Protege - Meraki",
+                "name": "Protege - Meraki",
+                "templates": [
+                    {
+                        "name": "Cisco Meraki dashboard by HTTP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$MERAKI.API.URL}",
+                        "value": "api.meraki.com/api/v1",
+                        "description": "Cisco Meraki dashboard API URL, e.g., api.meraki.com/api/v1"
+                    },
+                    {
+                        "macro": "{$MERAKI.TOKEN}",
+                        "value": "67ddc7440449ddaec8211a00a2dfb8bff203ff35",
+                        "description": "Cisco Meraki dashboard API token."
+                    }
+                ],
+                "inventory_mode": "DISABLED"
+            },
+            {
+                "host": "PVG-FWL",
+                "name": "Firewall PROVIG Barra Funda",
+                "description": "Firewall Fortinet PROVIG Barra Funda",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Provig"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.4.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PRO-FW-01.dprotege.com.br",
+                    "os": "v7.4.9,build2829,250924 (GA.M)",
+                    "os_short": "v7.4.9,build2829,250924 (GA.M)",
+                    "serialno_a": "FGT40FTK2209DPJN",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209DPJN",
+                    "software": "v7.0.15,build0632,240401 (GA.M)",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.4.9,build2829,250924 (GA.M)",
+                    "location_lat": "-23.519834466443",
+                    "location_lon": "-46.675024589999",
+                    "model": "Fortinet Firewall FortiGate-40F v7.0.15,build0632,240401 (GA.M)"
+                }
+            },
+            {
+                "host": "PVH-FWL-01",
+                "name": "Firewall Porto Velho",
+                "description": "Firewall Fortinet Porto Velho",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Porto Velho"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.54.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "PVO-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099PXQ",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099PXQ",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-8.7638387500280",
+                    "location_lon": "-63.904861111888"
+                }
+            },
+            {
+                "host": "RBP-FWL-01",
+                "name": "Firewall Ribeirao Preto",
+                "description": "Firewall Fortinet Ribeirao Preto",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Ribeir\u00e3o Preto"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.15.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "RBP-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GJ84",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GJ84",
+                    "software": "v7.0.15,build0632,240401 (GA.M)",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.169608284346",
+                    "location_lon": "-47.797325500914",
+                    "model": "Fortinet Firewall FortiGate-60F v7.0.15,build0632,240401 (GA.M)"
+                }
+            },
+            {
+                "host": "RBR-FWL-01",
+                "name": "Firewall Rio Branco",
+                "description": "Firewall Fortinet Rio Branco",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Rio Branco"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.53.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "RBR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099LNU",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099LNU",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-9.9737340045780",
+                    "location_lon": "-67.805013408862"
+                }
+            },
+            {
+                "host": "RJS-FWL-01",
+                "name": "Firewall Sao Cristovao",
+                "description": "Firewall Fortinet Sao Cristovao",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/S\u00e3o Cristov\u00e3o"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.48.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SCT-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GKA3",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GKA3",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-12.768461525263",
+                    "location_lon": "-52.224560817765"
+                }
+            },
+            {
+                "host": "RVD-FWL-01",
+                "name": "Firewall Rio Verde",
+                "description": "Firewall Fortinet Rio Verde",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Rio Verde"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.66.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "RVD-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2109A02L",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2109A02L",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-17.790095441467",
+                    "location_lon": "-50.919240652237"
+                }
+            },
+            {
+                "host": "SBT-FWL-01",
+                "name": "Firewall Sao Sebastiao",
+                "description": "Firewall Fortinet Sao Sebastiao",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Fazenda Sao Sebastiao"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.64.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SBT-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209E5SS",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209E5SS",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)"
+                },
+                "inventory_mode": "AUTOMATIC"
+            },
+            {
+                "host": "SJC-FWL-01",
+                "name": "Firewall Sao Jose dos Campos",
+                "description": "Firewall Fortinet SAO JOSE DOS CAMPOS",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/S\u00e3o Jos\u00e9 dos Campos"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.17.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SJC-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099QP6",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099QP6",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.215304936282",
+                    "location_lon": "-45.891185484000"
+                }
+            },
+            {
+                "host": "SJP-FWL-01",
+                "name": "Firewall Sao Jose do Rio Preto",
+                "description": "Firewall Fortinet Sao Jose do Rio Preto",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/S\u00e3o Jos\u00e9 do Rio Preto"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.34.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SRP-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099WHA",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099WHA",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-20.792521549082",
+                    "location_lon": "-49.360255592466"
+                }
+            },
+            {
+                "host": "SRA-FWL-01",
+                "name": "Firewall Serra",
+                "description": "Firewall Fortinet SERRA",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Serra"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.73.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SRA-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209C0QT",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209C0QT",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-20.202624390460",
+                    "location_lon": "-40.266126017717"
+                }
+            },
+            {
+                "host": "SRC-FWL-01",
+                "name": "Firewall Sorocaba",
+                "description": "Firewall Fortinet SOROCABA",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Sorocaba"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.18.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SCB-FW-02.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209E5SK",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209E5SK",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.490119228630",
+                    "location_lon": "-47.479989344522"
+                }
+            },
+            {
+                "host": "STA-FWL-01",
+                "name": "Firewall Santa Cruz do Sul",
+                "description": "Firewall Fortinet Sta Cruz do Sul",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Santa Cruz do Sul"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.29.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SCS-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099W03",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099W03",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-29.713290965373",
+                    "location_lon": "-52.425437244125"
+                }
+            },
+            {
+                "host": "STO-FWL-01",
+                "name": "Firewall Santo Andre",
+                "description": "Firewall Fortinet Santo Andre",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Santo Andre"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.11.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "STA-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT60FTK2209GJ7D",
+                    "hardware_full": "Fortinet FGT_60F, HW Serial#: FGT60FTK2209GJ7D",
+                    "software_full": "Fortinet Firewall FortiGate-60F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.688448391190",
+                    "location_lon": "-46.493578396129"
+                }
+            },
+            {
+                "host": "STS-FWL-01",
+                "name": "Firewall Santos",
+                "description": "Firewall Fortinet SANTOS",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Santos"
+                    },
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.39.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "SNT-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209DYJW",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209DYJW",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-23.959897968549",
+                    "location_lon": "-46.332215734700"
+                }
+            },
+            {
+                "host": "UBE-FWL-01",
+                "name": "Firewall Uberlandia",
+                "description": "Firewall Uberlandia",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Uberl\u00e2ndia"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.50.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "UBR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099W43",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099W43",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-18.907009702818",
+                    "location_lon": "-48.293892410427"
+                }
+            },
+            {
+                "host": "VAR-FWL-01",
+                "name": "Firewall Varginha",
+                "description": "Firewall Fortinet Varginha",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Varginha"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.72.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "VGA-FW-02.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099VCQ",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099VCQ",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-21.587338383337",
+                    "location_lon": "-45.435989965460"
+                }
+            },
+            {
+                "host": "VLN-FWL-01",
+                "name": "Firewall Vilhena",
+                "description": "Firewall Fortinet Vilhena",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Vilhena"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.56.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "VLN-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099VM6",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099VM6",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-12.743103525308",
+                    "location_lon": "-60.142238780984"
+                }
+            },
+            {
+                "host": "VRD-FWL-01",
+                "name": "Firewall Volta Redonda",
+                "description": "Firewall Volta Redonda",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Volta Redonda"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.26.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "VRD-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK22099P9S",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK22099P9S",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-22.525969814972",
+                    "location_lon": "-44.130978609615"
+                }
+            },
+            {
+                "host": "VTR-FWL-01",
+                "name": "Firewall Vitoria",
+                "description": "Firewall Banco - Vitoria",
+                "monitored_by": "PROXY",
+                "proxy": {
+                    "name": "zbx-proxy-protege03"
+                },
+                "templates": [
+                    {
+                        "name": "Protege - Template Net Fortinet FortiGate SNMP"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Protege/Seguranca/Firewall/Bases"
+                    },
+                    {
+                        "name": "Protege/Vitoria"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "SNMP",
+                        "ip": "10.75.3.1",
+                        "port": "161",
+                        "details": {
+                            "community": "{$SNMP_COMMUNITY}"
+                        },
+                        "interface_ref": "if1"
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$SNMP_COMMUNITY}",
+                        "value": "ZabbixProtege"
+                    }
+                ],
+                "inventory": {
+                    "name": "VTR-FW-01.dprotege.com.br",
+                    "os": "v7.0.17,build0682,250113 (GA.M)",
+                    "os_short": "v7.0.17,build0682,250113 (GA.M)",
+                    "serialno_a": "FGT40FTK2209DKGC",
+                    "hardware_full": "Fortinet FGT_40F, HW Serial#: FGT40FTK2209DKGC",
+                    "software_full": "Fortinet Firewall FortiGate-40F v7.0.17,build0682,250113 (GA.M)",
+                    "location_lat": "-12.743093060735",
+                    "location_lon": "-60.142431900024"
+                }
+            }
+        ]
+    }
+}
