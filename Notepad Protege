@@ -1,15 +1,3 @@
-(
-  avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m) > ({$IF.UTIL.MAX:"1200"}/100)*{$LINK1.SPEED}
-  or
-  avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m) > ({$IF.UTIL.MAX:"1200"}/100)*{$LINK1.SPEED}
-)
- and
- {$LINK1.SPEED} > 0
+https://n544.dashboard.meraki.com/o/tEsDcc
 
-
-
-
-avg(/ARA-FWL-01/net.if.in[ifHCInOctets.1200],15m) < (({$IF.UTIL.MAX:"1200"}-3)/100)*{$LINK1.SPEED}
- and
-avg(/ARA-FWL-01/net.if.out[ifHCOutOctets.1200],15m) < (({$IF.UTIL.MAX:"1200"}-3)/100)*{$LINK1.SPEED}
-
+67ddc7440449ddaec8211a00a2dfb8bff203ff35
