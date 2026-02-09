@@ -40,26 +40,68 @@ https://zabbix.protege.com.br/zabbix.php?action=token.list
 
 
 
+// Pegar os dados do painel
+const data = context.panel.data;
+
+// Arrays para nomes das bases e valores
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2'];
+
+// Verificar se há dados
+if (data && data.series && data.series.length > 0) {
+  // Primeira série contém todos os campos
+  const serie = data.series[0];
+  
+  if (serie.fields) {
+    // Processar cada campo (coluna)
+    serie.fields.forEach(field => {
+      // Pular o campo Time
+      if (field.name && field.name !== 'Time' && field.values && field.values.length > 0) {
+        // Nome da base (nome da coluna)
+        categories.push(field.name);
+        
+        // Pegar o último valor não-nulo
+        let lastValue = null;
+        for (let i = field.values.length - 1; i >= 0; i--) {
+          if (field.values[i] !== null && field.values[i] !== undefined) {
+            lastValue = field.values[i];
+            break;
+          }
+        }
+        
+        values.push(lastValue || 0);
+      }
+    });
+  }
+}
+
+// Retornar configuração do ECharts
 return {
-  dataset: context.editor.dataset,
   xAxis: {
     type: 'category',
+    data: categories,
     axisLabel: {
-      rotate: 0, // Rotação zero para nomes legíveis
-      fontSize: 12
+      rotate: 0,
+      fontSize: 12,
+      interval: 0
     }
   },
   yAxis: {
     type: 'value',
     max: 100,
-    name: '% Disponibilidade'
+    min: 0,
+    name: '% Disponibilidade',
+    axisLabel: {
+      formatter: '{value}%'
+    }
   },
   grid: {
-    bottom: "8%",
+    bottom: "12%",
     containLabel: true,
-    left: "8%",
+    left: "10%",
     right: "5%",
-    top: "10%"
+    top: "8%"
   },
   tooltip: {
     trigger: 'item',
@@ -67,25 +109,18 @@ return {
   },
   series: [{
     type: 'bar',
+    data: values,
     barWidth: '60%',
-    // Mapeamento correto para Zabbix (nome da série no X, valor no Y)
-    encode: {
-      x: '__name__',  // Nome da série Zabbix (Firewall Consolacao, etc.)
-      y: 'A'          // Campo da query A (seu valor de disponibilidade)
-    },
-    // Valor no topo da barra
     label: {
       show: true,
       position: 'top',
       formatter: '{c}%',
       fontSize: 14,
       fontWeight: 'bold',
-      color: '#000'
+      color: '#fff'
     },
-    // Cores diferentes para cada barra
     itemStyle: {
       color: function(params) {
-        const colors = ['#52c41a', '#faad14', '#1890ff', '#722ed1', '#f5222d'];
         return colors[params.dataIndex % colors.length];
       }
     }
