@@ -19,6 +19,27 @@ https://zabbix.protege.com.br/zabbix.php?action=token.list
 
 
 
+https://n544.dashboard.meraki.com/o/tEsDcc
+
+67ddc7440449ddaec8211a00a2dfb8bff203ff35
+
+
+
+
+bTyvd7D3@cB4
+
+
+
+9c9919f5fe9c8f3d6ec181a2ab5d419b4ce201c653963fcafefc54ecb1ddd500
+
+
+
+
+https://zabbix.protege.com.br/zabbix.php?action=token.list
+
+
+
+
 return {
   dataset: context.editor.dataset,
   xAxis: {
