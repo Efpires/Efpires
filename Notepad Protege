@@ -50,16 +50,18 @@ const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2'
 
 // Verificar se há dados
 if (data && data.series && data.series.length > 0) {
-  // Primeira série contém todos os campos
   const serie = data.series[0];
   
   if (serie.fields) {
-    // Processar cada campo (coluna)
     serie.fields.forEach(field => {
-      // Pular o campo Time
       if (field.name && field.name !== 'Time' && field.values && field.values.length > 0) {
-        // Nome da base (nome da coluna)
-        categories.push(field.name);
+        // Limpar o nome da base (remover "Firewall" e ": Disponibilidade 30d")
+        let baseName = field.name
+          .replace('Firewall ', '')
+          .replace(': Disponibilidade 30d', '')
+          .trim();
+        
+        categories.push(baseName);
         
         // Pegar o último valor não-nulo
         let lastValue = null;
@@ -114,7 +116,9 @@ return {
     label: {
       show: true,
       position: 'top',
-      formatter: '{c}%',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
       fontSize: 14,
       fontWeight: 'bold',
       color: '#fff'
