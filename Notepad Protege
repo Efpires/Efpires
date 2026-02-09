@@ -15,3 +15,61 @@ bTyvd7D3@cB4
 
 
 https://zabbix.protege.com.br/zabbix.php?action=token.list
+
+
+
+
+return {
+  dataset: context.editor.dataset,
+  xAxis: {
+    type: 'category',
+    // Nome das bases vira o eixo X (vem automaticamente do campo 'host' ou '__name__' do Zabbix)
+  },
+  yAxis: {
+    type: 'value',
+    max: 100, // Máximo 100% para disponibilidade
+    name: '%'
+  },
+  grid: {
+    bottom: "5%",
+    containLabel: true,
+    left: "5%",
+    right: "5%",
+    top: "8%"
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  series: [
+    {
+      type: 'bar',
+      showBackground: true,
+      backgroundStyle: {
+        color: 'rgba(180, 180, 180, 0.2)'
+      },
+      // Valor das barras (campo numérico do Zabbix, ex.: 'Disponibilidade 30d')
+      encode: {
+        x: 'host',  // ou '__name__' se assim vier do Zabbix
+        y: 'value'  // nome do campo numérico da disponibilidade
+      },
+      // Valor no topo de cada barra
+      label: {
+        show: true,
+        position: 'top',
+        formatter: '{c}%',
+        fontSize: 12,
+        fontWeight: 'bold'
+      },
+      // Cores diferentes para cada barra
+      itemStyle: {
+        color: function(params) {
+          const colors = ['#52c41a', '#faad14', '#f5222d', '#1890ff', '#722ed1']; // Verde, Amarelo, Vermelho, Azul, Roxo
+          return colors[params.dataIndex % colors.length];
+        }
+      }
+    }
+  ]
+};
