@@ -1,3 +1,106 @@
+
+const data = context.panel.data;
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2', '#eb2f96', '#fadb14'];
+
+if (data && data.series && data.series.length > 0) {
+  const serie = data.series[0];
+  
+  const baseField = serie.fields.find(f => f.name === 'base');
+  const dispField = serie.fields.find(f => f.name === 'disponibilidade');
+  
+  if (baseField && dispField) {
+    for (let i = 0; i < baseField.values.length; i++) {
+      let baseName = baseField.values[i]
+        .replace('Consolacao', 'Consolação')
+        .trim();
+      
+      categories.push(baseName);
+      values.push(dispField.values[i]);
+    }
+  }
+}
+
+return {
+  // Grid rente ao painel e responsivo
+  grid: {
+    top: '5%',
+    left: '3%',
+    right: '2%',
+    bottom: '3%',
+    containLabel: true  // Garante que labels não sejam cortados
+  },
+  xAxis: {
+    type: 'category',
+    data: categories,
+    axisLabel: {
+      rotate: 45,  // Rotaciona um pouco para caber mais nomes
+      fontSize: 10,
+      interval: 0,
+      margin: 8
+    },
+    axisTick: {
+      alignWithLabel: true
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    min: 0,
+    axisLabel: {
+      formatter: '{value}%',
+      fontSize: 10
+    },
+    splitLine: {
+      lineStyle: {
+        type: 'dashed',
+        opacity: 0.3
+      }
+    }
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c}%',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    borderColor: '#333',
+    borderWidth: 1
+  },
+  series: [{
+    type: 'bar',
+    data: values,
+    barWidth: '80%',  // Barras mais largas para aproveitar espaço
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
+      fontSize: 11,
+      fontWeight: 'bold',
+      color: '#fff',
+      distance: 5
+    },
+    itemStyle: {
+      color: function(params) {
+        return colors[params.dataIndex % colors.length];
+      },
+      borderRadius: [4, 4, 0, 0]  // Arredonda topo das barras
+    },
+    emphasis: {
+      itemStyle: {
+        shadowBlur: 10,
+        shadowColor: 'rgba(0,0,0,0.5)'
+      }
+    }
+  }]
+};
+
+
+
+
+
+
 https://n544.dashboard.meraki.com/o/tEsDcc
 
 67ddc7440449ddaec8211a00a2dfb8bff203ff35
