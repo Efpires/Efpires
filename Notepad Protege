@@ -1,3 +1,58 @@
+debug 1
+
+SELECT 
+  h.name AS switch_name,
+  g.name AS grupo,
+  i.key_,
+  i.value_type
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  g.name LIKE '%switch%'
+  AND i.key_ LIKE '%availability%'
+LIMIT 10;
+
+
+debug 2
+
+SELECT DISTINCT g.name
+FROM hstgrp g
+INNER JOIN hosts_groups hg ON g.groupid = hg.groupid
+INNER JOIN hosts h ON hg.hostid = h.hostid
+INNER JOIN hosts_groups hg2 ON h.hostid = hg2.hostid
+INNER JOIN hstgrp g2 ON hg2.groupid = g2.groupid
+WHERE 
+  g2.name LIKE '%switch%'
+ORDER BY g.name;
+
+
+
+debug 3
+
+SELECT 
+  h.name AS switch_name,
+  STRING_AGG(g.name, ', ' ORDER BY g.name) AS grupos
+FROM hosts h
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  h.hostid IN (
+    SELECT DISTINCT h2.hostid
+    FROM hosts h2
+    INNER JOIN hosts_groups hg2 ON h2.hostid = hg2.hostid
+    INNER JOIN hstgrp g2 ON hg2.groupid = g2.groupid
+    WHERE g2.name LIKE '%switch%'
+  )
+GROUP BY h.name
+ORDER BY h.name
+LIMIT 10;
+
+
+
+
+
 SELECT 
   REPLACE(g_local.name, 'protege/', '') AS localidade,
   ROUND(AVG(hi.value::numeric), 2) AS disponibilidade_media,
