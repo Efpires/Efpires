@@ -1,4 +1,5 @@
-title: {
+return {
+  title: {
     text: 'Disponibilidade Switches',
     left: 'center',
     top: '2%',
@@ -7,8 +8,14 @@ title: {
       fontWeight: 'bold',
       color: '#fff'
     }
-
-
+  },
+  grid: {
+    top: '12%',  // Aumentei de 5% para 12% para dar espaço ao título
+    left: '1%',
+    right: '1%',
+    bottom: '3%',
+    containLabel: true
+  },
 
 
 
