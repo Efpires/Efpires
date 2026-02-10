@@ -1,4 +1,99 @@
-debug 1
+const data = context.panel.data;
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2', '#eb2f96', '#fadb14'];
+
+if (data && data.series && data.series.length > 0) {
+  const serie = data.series[0];
+  
+  const localidadeField = serie.fields.find(f => f.name === 'localidade');
+  const dispField = serie.fields.find(f => f.name === 'disponibilidade_media');
+  
+  if (localidadeField && dispField) {
+    for (let i = 0; i < localidadeField.values.length; i++) {
+      categories.push(localidadeField.values[i]);
+      values.push(dispField.values[i]);
+    }
+  }
+}
+
+return {
+  grid: {
+    top: '5%',
+    left: '1%',
+    right: '1%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'category',
+    data: categories,
+    axisLabel: {
+      rotate: 45,
+      fontSize: 10,
+      interval: 0,
+      margin: 8
+    },
+    axisTick: {
+      alignWithLabel: true
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    min: 0,
+    axisLabel: {
+      formatter: '{value}%',
+      fontSize: 10
+    },
+    splitLine: {
+      lineStyle: {
+        type: 'dashed',
+        opacity: 0.3
+      }
+    }
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c}%',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    borderColor: '#333',
+    borderWidth: 1
+  },
+  series: [{
+    type: 'bar',
+    data: values,
+    barWidth: '85%',
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
+      fontSize: 11,
+      fontWeight: 'bold',
+      color: '#fff',
+      distance: 5
+    },
+    itemStyle: {
+      color: function(params) {
+        return colors[params.dataIndex % colors.length];
+      },
+      borderRadius: [4, 4, 0, 0]
+    },
+    emphasis: {
+      itemStyle: {
+        shadowBlur: 10,
+        shadowColor: 'rgba(0,0,0,0.5)'
+      }
+    }
+  }]
+};
+
+
+
+==============================
+ebug 1
 
 SELECT 
   h.name AS switch_name,
