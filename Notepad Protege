@@ -549,6 +549,558 @@ ORDER BY g.name, h.name;
 
 
 
+
+root css
+
+/* Ajustes básicos para ocupar toda a área */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Fundo gradiente radial ajustado */
+  background: radial-gradient(circle,
+      #400ab6 0%,
+      rgba(15, 15, 15, 1) 80%,
+      rgba(5, 20, 60, 1) 100%);
+}
+
+/* Contêiner principal do banner */
+.flowbix-banner-container {
+  background: rgba(163, 48, 48, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+/* Contêiner do conteúdo do banner */
+.flowbix-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Estilo do logo */
+.flowbix-logo {
+  height: 4rem;
+  width: auto;
+}
+
+/* Estilo do texto */
+.flowbix-text {
+  font-size: 3rem;
+  color: #95e38a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Barra verde antes do texto */
+.flowbix-divider {
+  color: #59ee9a;
+  font-size: 2rem;
+}
+
+/* Estilo do ícone de segurança */
+.flowbix-security-icon {
+  width: auto;
+  height: 2.5rem;
+}
+
+/* Estilo do ícone labela */
+.flowbix-label {
+  font-size: 10rem; /* Aumente esse valor conforme desejar */
+  color: #95e38a;
+  line-height: 1;
+}
+
+.css-1kfgvg7-thead {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #429e8a 20%, #133e5c 50%);
+  padding: 0;
+  border-radius: 1rem 1rem 0 0;
+  border-top: 1px solid rgba(0, 99, 4, 0.12);
+  border-left: 1px solid rgba(204, 204, 220, 0.12);
+  border-right: 1px solid rgba(204, 204, 220, 0.12);
+}
+
+.css-kkenh-panel-container-panel-transparent-container {
+  background: 
+    radial-gradient(
+      circle at bottom center,
+      rgba(79, 155, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    rgba(0, 0, 0, 0.5);
+
+  color: white;
+  border-radius: 1rem;
+}
+
+.css-kuoxoh-panel-content {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.css-1hqhlx3-cellContainerOverflow {
+  background-color: rgba(10, 30, 33, 1);
+}
+
+.css-1kxk3wv-cellContainerOverflow {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.css-1rkhn60-cellContainerOverflow {
+  border: 1px solid rgba(245, 1, 27, 1);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.css-1rkhn60-cellContainerOverflow:last-child:not(:only-child) {
+  border-right: 1px solid rgba(245, 1, 27, 1);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.css-1peyh2t {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: radial-gradient(circle,
+      #3e04b9 0%,
+      rgba(15, 15, 15, 1) 80%,
+      rgba(5, 20, 60, 1) 100%);
+}
+
+
+
+.css-1bgjk0t {
+    display: flex
+;
+    position: fixed;
+    z-index: 1000;
+    left: 0px;
+    right: 0px;
+     background: radial-gradient(circle,
+      #3e04b9 0%,
+      rgba(15, 15, 15, 1) 80%,
+      rgba(5, 20, 60, 1) 100%);
+    flex-direction: column;
+}
+
+.css-17dv3xo {
+        position: sticky;
+        z-index: 999;
+        background: radial-gradient(circle,
+         #3e04b9 0%,
+         rgba(15, 15, 15, 1) 80%,
+         rgba(5, 20, 60, 1) 100%);
+        top: 80px;
+    }
+
+ .css-1plr551 {
+  background: radial-gradient(circle,
+        
+         rgba(5, 20, 60, 1) 100%);
+ }   
+
+
+
+
+CSS
+
+.topo-gab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #02478d;
+  padding: 30px;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logo-gab {
+  height: 220px;
+}
+
+.linha-colorida {
+  width: 4px;
+  height: 80px;
+  background-color: #f4f5f5;
+  border-radius: 2px;
+}
+
+.texto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-gab {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.descricao-gab {
+  color: #cfcfcf;
+  font-size: 13px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+
+
+
+HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowbix Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+    <img src="https://www.teletex.com.br/wp-content/uploads/2025/03/logo_teletex_branca.png" alt="Logo TELETEX" style="height: 70px; width:280px ; margin-right: 10px;">
+    <div class="flowbix-text">
+      <span class="flowbix-divider" style="font-size: 4rem; color: #FFFFFF;">|</span>
+      <span class="flowbix-label" style="font-size: 3rem; color: #FFFFFF;"> ALERTAS AGREGADOS </span>
+    </div>
+  </div>
+</div>
+
+
+
+On rende
+
+// Sets the value from the first series on every refresh
+const htmlgraphicsValue = htmlNode.getElementById('htmlgraphics-value');
+
+if (htmlgraphicsValue) {
+  const valueField = data.series[0]?.fields[1];
+  if (valueField) {
+    const length = valueField.values.length;
+    htmlgraphicsValue.textContent = valueField.values.get(length - 1);
+  } else {
+    htmlgraphicsValue.textContent = "No data"
+  }
+}
+
+
+
+
+
+
+===================================================
+
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND h.name NOT ILIKE '%AWS%'  -- Remove qualquer host que tenha AWS no nome
+  AND h.name NOT ILIKE '%ProtegeCash%'  -- Remove ProtegeCash também
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
+
+
+
+const data = context.panel.data;
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2', '#eb2f96', '#fadb14'];
+
+if (data && data.series && data.series.length > 0) {
+  const serie = data.series[0];
+  
+  const baseField = serie.fields.find(f => f.name === 'base');
+  const dispField = serie.fields.find(f => f.name === 'disponibilidade');
+  
+  if (baseField && dispField) {
+    for (let i = 0; i < baseField.values.length; i++) {
+      let baseName = baseField.values[i]
+        .replace('Consolacao', 'Consolação')
+        .trim();
+      
+      categories.push(baseName);
+      values.push(dispField.values[i]);
+    }
+  }
+}
+
+return {
+  // Grid rente ao painel e responsivo
+  grid: {
+    top: '5%',
+    left: '3%',
+    right: '2%',
+    bottom: '3%',
+    containLabel: true  // Garante que labels não sejam cortados
+  },
+  xAxis: {
+    type: 'category',
+    data: categories,
+    axisLabel: {
+      rotate: 45,  // Rotaciona um pouco para caber mais nomes
+      fontSize: 10,
+      interval: 0,
+      margin: 8
+    },
+    axisTick: {
+      alignWithLabel: true
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    min: 0,
+    axisLabel: {
+      formatter: '{value}%',
+      fontSize: 10
+    },
+    splitLine: {
+      lineStyle: {
+        type: 'dashed',
+        opacity: 0.3
+      }
+    }
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c}%',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    borderColor: '#333',
+    borderWidth: 1
+  },
+  series: [{
+    type: 'bar',
+    data: values,
+    barWidth: '80%',  // Barras mais largas para aproveitar espaço
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
+      fontSize: 11,
+      fontWeight: 'bold',
+      color: '#fff',
+      distance: 5
+    },
+    itemStyle: {
+      color: function(params) {
+        return colors[params.dataIndex % colors.length];
+      },
+      borderRadius: [4, 4, 0, 0]  // Arredonda topo das barras
+    },
+    emphasis: {
+      itemStyle: {
+        shadowBlur: 10,
+        shadowColor: 'rgba(0,0,0,0.5)'
+      }
+    }
+  }]
+};
+
+
+
+
+
+
+https://n544.dashboard.meraki.com/o/tEsDcc
+
+67ddc7440449ddaec8211a00a2dfb8bff203ff35
+
+
+
+
+bTyvd7D3@cB4
+
+
+
+9c9919f5fe9c8f3d6ec181a2ab5d419b4ce201c653963fcafefc54ecb1ddd500
+
+
+
+
+https://zabbix.protege.com.br/zabbix.php?action=token.list
+
+
+
+
+https://n544.dashboard.meraki.com/o/tEsDcc
+
+67ddc7440449ddaec8211a00a2dfb8bff203ff35
+
+
+
+
+bTyvd7D3@cB4
+
+
+
+9c9919f5fe9c8f3d6ec181a2ab5d419b4ce201c653963fcafefc54ecb1ddd500
+
+
+
+
+https://zabbix.protege.com.br/zabbix.php?action=token.list
+
+const data = context.panel.data;
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2', '#eb2f96', '#fadb14'];
+
+if (data && data.series && data.series.length > 0) {
+  const serie = data.series[0];
+  
+  const baseField = serie.fields.find(f => f.name === 'base');
+  const dispField = serie.fields.find(f => f.name === 'disponibilidade');
+  
+  if (baseField && dispField) {
+    for (let i = 0; i < baseField.values.length; i++) {
+      let baseName = baseField.values[i]
+        .replace('Consolacao', 'Consolação')
+        .trim();
+      
+      categories.push(baseName);
+      values.push(dispField.values[i]);
+    }
+  }
+}
+
+return {
+  xAxis: {
+    type: 'category',
+    data: categories,
+    axisLabel: {
+      rotate: 0,
+      fontSize: 11,
+      interval: 0
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    min: 0,
+    name: '% Disponibilidade',
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  },
+  grid: {
+    bottom: "12%",
+    containLabel: true,
+    left: "10%",
+    right: "5%",
+    top: "8%"
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c}%'
+  },
+  series: [{
+    type: 'bar',
+    data: values,
+    barWidth: '55%',
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
+      fontSize: 13,
+      fontWeight: 'bold',
+      color: '#fff'
+    },
+    itemStyle: {
+      color: function(params) {
+        return colors[params.dataIndex % colors.length];
+      }
+    }
+  }]
+};
+
+
+
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
+
+
+
+
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history_uint hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history_uint hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
+
+
+
+
 root css
 
 /* Ajustes básicos para ocupar toda a área */
