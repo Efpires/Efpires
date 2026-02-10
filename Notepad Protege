@@ -1,3 +1,26 @@
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND h.name NOT ILIKE '%AWS%'  -- Remove qualquer host que tenha AWS no nome
+  AND h.name NOT ILIKE '%ProtegeCash%'  -- Remove ProtegeCash também
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
+
+
 
 const data = context.panel.data;
 const categories = [];
