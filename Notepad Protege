@@ -37,6 +37,80 @@ bTyvd7D3@cB4
 
 https://zabbix.protege.com.br/zabbix.php?action=token.list
 
+const data = context.panel.data;
+const categories = [];
+const values = [];
+const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2', '#eb2f96', '#fadb14'];
+
+if (data && data.series && data.series.length > 0) {
+  const serie = data.series[0];
+  
+  const baseField = serie.fields.find(f => f.name === 'base');
+  const dispField = serie.fields.find(f => f.name === 'disponibilidade');
+  
+  if (baseField && dispField) {
+    for (let i = 0; i < baseField.values.length; i++) {
+      let baseName = baseField.values[i]
+        .replace('Consolacao', 'Consolação')
+        .trim();
+      
+      categories.push(baseName);
+      values.push(dispField.values[i]);
+    }
+  }
+}
+
+return {
+  xAxis: {
+    type: 'category',
+    data: categories,
+    axisLabel: {
+      rotate: 0,
+      fontSize: 11,
+      interval: 0
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 100,
+    min: 0,
+    name: '% Disponibilidade',
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  },
+  grid: {
+    bottom: "12%",
+    containLabel: true,
+    left: "10%",
+    right: "5%",
+    top: "8%"
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c}%'
+  },
+  series: [{
+    type: 'bar',
+    data: values,
+    barWidth: '55%',
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function(params) {
+        return Number(params.value).toFixed(2) + '%';
+      },
+      fontSize: 13,
+      fontWeight: 'bold',
+      color: '#fff'
+    },
+    itemStyle: {
+      color: function(params) {
+        return colors[params.dataIndex % colors.length];
+      }
+    }
+  }]
+};
 
 
 
