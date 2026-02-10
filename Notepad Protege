@@ -40,93 +40,46 @@ https://zabbix.protege.com.br/zabbix.php?action=token.list
 
 
 
-// Pegar os dados do painel
-const data = context.panel.data;
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
 
-// Arrays para nomes das bases e valores
-const categories = [];
-const values = [];
-const colors = ['#52c41a', '#1890ff', '#faad14', '#722ed1', '#f5222d', '#13c2c2'];
 
-// Verificar se há dados
-if (data && data.series && data.series.length > 0) {
-  const serie = data.series[0];
-  
-  if (serie.fields) {
-    serie.fields.forEach(field => {
-      if (field.name && field.name !== 'Time' && field.values && field.values.length > 0) {
-        // Limpar o nome da base (remover "Firewall" e ": Disponibilidade 30d")
-        let baseName = field.name
-          .replace('Firewall ', '')
-          .replace(': Disponibilidade 30d', '')
-          .trim();
-        
-        categories.push(baseName);
-        
-        // Pegar o último valor não-nulo
-        let lastValue = null;
-        for (let i = field.values.length - 1; i >= 0; i--) {
-          if (field.values[i] !== null && field.values[i] !== undefined) {
-            lastValue = field.values[i];
-            break;
-          }
-        }
-        
-        values.push(lastValue || 0);
-      }
-    });
-  }
-}
 
-// Retornar configuração do ECharts
-return {
-  xAxis: {
-    type: 'category',
-    data: categories,
-    axisLabel: {
-      rotate: 0,
-      fontSize: 12,
-      interval: 0
-    }
-  },
-  yAxis: {
-    type: 'value',
-    max: 100,
-    min: 0,
-    name: '% Disponibilidade',
-    axisLabel: {
-      formatter: '{value}%'
-    }
-  },
-  grid: {
-    bottom: "12%",
-    containLabel: true,
-    left: "10%",
-    right: "5%",
-    top: "8%"
-  },
-  tooltip: {
-    trigger: 'item',
-    formatter: '{b}: {c}%'
-  },
-  series: [{
-    type: 'bar',
-    data: values,
-    barWidth: '60%',
-    label: {
-      show: true,
-      position: 'top',
-      formatter: function(params) {
-        return Number(params.value).toFixed(2) + '%';
-      },
-      fontSize: 14,
-      fontWeight: 'bold',
-      color: '#fff'
-    },
-    itemStyle: {
-      color: function(params) {
-        return colors[params.dataIndex % colors.length];
-      }
-    }
-  }]
-};
+
+SELECT 
+  REPLACE(REPLACE(h.name, 'Firewall ', ''), 'Base ', '') AS base,
+  ROUND(hi.value::numeric, 2) AS disponibilidade,
+  g.name AS grupo
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN history_uint hi ON i.itemid = hi.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'availability.icmp30d'
+  AND h.status = 0
+  AND g.name IN ('Protege/Seguranca/Firewall/HUB', 'Protege/Seguranca/Firewall/Bases')
+  AND hi.clock = (
+    SELECT MAX(hi2.clock) 
+    FROM history_uint hi2 
+    WHERE hi2.itemid = i.itemid
+  )
+ORDER BY g.name, h.name;
+
