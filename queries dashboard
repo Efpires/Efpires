@@ -4,7 +4,10 @@ SELECT
   MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[vm.memory.util.%]' THEN h.value END) AS usememoria,
   MAX(CASE WHEN it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]' THEN h.value END) AS temperatura,
   MAX(CASE WHEN it.key_ LIKE '%uptime%' THEN hu.value END) AS uptime,
-  MAX(DATE_FORMAT(CONVERT_TZ(from_unixtime(hu.clock), '+00:00', '+00:00'), '%d-%m-%Y %H:%i:%s')) AS ultverificacao
+  MAX(TO_CHAR(
+    (hu.clock * INTERVAL '1 second') AT TIME ZONE 'UTC' AT TIME ZONE '-03:00', 
+    'DD-MM-YYYY HH24:MI:SS'
+  )) AS ultverificacao
 FROM items it
 INNER JOIN hosts ht ON ht.hostid = it.hostid
 INNER JOIN hosts_groups hg ON hg.hostid = ht.hostid
