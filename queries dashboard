@@ -34,11 +34,8 @@ where it.key_ in ('icmpping')
   and tg.status = 0
   and tg.state = 0
   and tg.value in (0,1)
-  and g.name IN ($base:sqlstring)
+  and g.name = ANY(STRING_TO_ARRAY('$base', ','))
   and ht.name = $switch;
-
-
-db query error: pq: syntax error at or near ":"
 
 
 
