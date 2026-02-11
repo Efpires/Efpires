@@ -1,12 +1,17 @@
-SELECT 
-  ht.name AS host,
-  MAX(h.value) AS usecpu
-FROM items it
-INNER JOIN hosts ht ON ht.hostid = it.hostid
-INNER JOIN hosts_groups hg ON hg.hostid = ht.hostid
-INNER JOIN hstgrp g ON g.groupid = hg.groupid
-LEFT JOIN history h ON it.itemid = h.itemid AND h.clock > EXTRACT(EPOCH FROM NOW()) - 1800
-WHERE g.name = $base
-  AND it.key_ LIKE '%cpu utilization%'
-GROUP BY ht.name
-ORDER BY ht.name;
+db query error: pq: column "protege" does not exist
+
+select count(it.itemid) "Total"
+from items it
+inner join hosts ht on ht.hostid = it.hostid
+inner join hosts_groups hg on ht.hostid = hg.hostid
+inner join hstgrp g on g.groupid = hg.groupid
+inner join functions f on it.itemid = f.itemid
+inner join triggers tg on tg.triggerid = f.triggerid
+where it.key_ in ('icmpping')
+  and ht.status = 0
+  and ht.flags in (0,4)
+  and it.status = 0
+  and tg.status = 0
+  and tg.state = 0
+  and tg.value in (0,1)
+  and g.name = $base;
