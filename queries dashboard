@@ -15,3 +15,25 @@ where it.key_ in ('icmpping')
   and tg.state = 0
   and tg.value in (0,1)
   and g.name = $base;
+
+
+
+
+
+select count(it.itemid) "Total"
+from items it
+inner join hosts ht on ht.hostid = it.hostid
+inner join hosts_groups hg on ht.hostid = hg.hostid
+inner join hstgrp g on g.groupid = hg.groupid
+inner join functions f on it.itemid = f.itemid
+inner join triggers tg on tg.triggerid = f.triggerid
+where it.key_ in ('icmpping')
+  and ht.status = 0
+  and ht.flags in (0,4)
+  and it.status = 0
+  and tg.status = 0
+  and tg.state = 0
+  and tg.value in (0,1)
+  and g.name IN ($base:sqlstring)
+  and ht.name = $switch;
+
