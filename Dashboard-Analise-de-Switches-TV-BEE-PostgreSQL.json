@@ -9,12 +9,12 @@
       "pluginName": "Zabbix"
     },
     {
-      "name": "DS_MYSQL-ZABBIX",
-      "label": "MySQL-Zabbix",
+      "name": "DS_POSTGRESQL-ZABBIX",
+      "label": "PostgreSQL-Zabbix",
       "description": "",
       "type": "datasource",
-      "pluginId": "mysql",
-      "pluginName": "MySQL"
+      "pluginId": "postgres",
+      "pluginName": "PostgreSQL"
     }
   ],
   "__elements": {},
