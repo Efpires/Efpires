@@ -1,3 +1,7 @@
+db query error: pq: function pg_catalog.timezone(unknown, interval) does not exist
+
+
+
 SELECT 
   ht.name AS host,
   MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]' THEN h.value END) AS usecpu,
