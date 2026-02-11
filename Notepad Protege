@@ -1,3 +1,6 @@
+
+/Protege\/([^\/]+)\/Switch/
+
 return {
   title: {
     text: 'Disponibilidade Switches',
