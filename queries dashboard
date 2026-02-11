@@ -37,3 +37,8 @@ where it.key_ in ('icmpping')
   and g.name IN ($base:sqlstring)
   and ht.name = $switch;
 
+
+db query error: pq: syntax error at or near ":"
+
+
+
