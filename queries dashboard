@@ -1,9 +1,9 @@
 SELECT 
   ht.name AS host,
-  MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]' THEN h.value END) AS usecpu,
-  MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[vm.memory.util.%]' THEN h.value END) AS usememoria,
-  MAX(CASE WHEN it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]' THEN h.value END) AS temperatura,
-  MAX(CASE WHEN it.key_ LIKE '%uptime%' THEN hu.value END) AS uptime,
+  MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[%]' THEN h.value END) AS usecpu,
+  MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[%]' THEN h.value END) AS usememoria,
+  MAX(CASE WHEN it.key_ LIKE 'sensor.temp.status[%]' THEN h.value END) AS temperatura,
+  MAX(CASE WHEN it.key_ LIKE 'system.hw.uptime' THEN hu.value END) AS uptime,
   MAX(TO_CHAR(
     TO_TIMESTAMP(hu.clock)::timestamp AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo', 
     'DD-MM-YYYY HH24:MI:SS'
