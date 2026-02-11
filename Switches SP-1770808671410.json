@@ -1,0 +1,987 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 41,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "femnrt6zzfw8wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "Switches SP",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#162134",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "name",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "femnrt6zzfw8wb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select now();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "femnrt6zzfw8wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-blue",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "femnrt6zzfw8wb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(it.itemid) \"Total\"\r\nfrom items it\r\ninner join hosts ht on ht.hostid = it.hostid\r\ninner join hosts_groups hg on ht.hostid = hg.hostid\r\ninner join functions f on it.itemid = f.itemid\r\ninner join triggers tg on tg.triggerid = f.triggerid\r\nwhere it.key_ in ('icmpping')\r\n  and ht.status = 0\r\n  and ht.flags in (0,4)\r\n  and it.status = 0\r\n  and tg.status = 0\r\n  and tg.state = 0\r\n  and tg.value in (0,1)\r\n  and hg.groupid = 135;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "femnrt6zzfw8wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#2ecc71",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 16,
+        "y": 0
+      },
+      "id": 19,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "femnrt6zzfw8wb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "Select count(it.itemid) \"Onlines\" from items it\r\ninner join hosts ht on ht.hostid = it.hostid\r\ninner join functions f on it.itemid = f.itemid\r\ninner join triggers tg on tg.triggerid = f.triggerid\r\ninner join hosts_groups hg on ht.hostid = hg.hostid\r\nwhere it.key_ in ('icmpping') and ht.status = 0 and ht.flags in (0,4) and it.status = 0 and tg.status = 0 and tg.state = 0 and tg.value in (0) and hg.groupid = 135;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "femnrt6zzfw8wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "red",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "femnrt6zzfw8wb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "#SELECT count(it.itemid) \"Switches Offlines\"\r\n#FROM items it\r\n#INNER JOIN hosts ht ON (it.hostid = ht.hostid and ht.name in ($host))\r\n#LEFT JOIN history_uint hu ON (hu.itemid = it.itemid)\r\n#where it.status = 0\r\n#and it.itemid in (SELECT itemid FROM items WHERE name LIKE '%ICMP ping%') and hu.value in (0);\r\n\r\nselect count(it.itemid) \"Offlines\" from items it\r\ninner join hosts ht on ht.hostid = it.hostid\r\ninner join functions f on it.itemid = f.itemid\r\ninner join triggers tg on tg.triggerid = f.triggerid\r\ninner join hosts_groups hg on ht.hostid = hg.hostid\r\nwhere it.key_ in ('icmpping') and ht.status = 0 and ht.flags in (0,4) and it.status = 0 and tg.status = 0 and tg.state = 0 and tg.value in (1) and hg.groupid = 135\r\n;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "femnrt6zzfw8wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "noValue": "-",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#173c48",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Zabbix Agent"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "Down"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Up"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CPU (%)"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "percent"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 50
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 198
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Memoria (%)"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "gauge",
+                  "valueDisplayMode": "text"
+                }
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 50
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 90
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 276
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Temperatura (Cº)"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 40
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 70
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Ping"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 1,
+                        "text": "Down"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Up"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.width",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Percas (%)"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "percent"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge"
+                }
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 30
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 226
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Uptime"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dtdhms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Latencia (ms)"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "s"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-green",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-orange",
+                      "value": 0.015
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 0.04
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 174
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Host"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 323
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 16,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "Ping"
+          }
+        ]
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "dataset": "zabbix",
+          "datasource": {
+            "type": "mysql",
+            "uid": "femnrt6zzfw8wb"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n  REPLACE(ht.name, 'Nissan - ', '') AS host,\r\n\r\n  MAX(CASE WHEN it.key_ LIKE 'icmpping' THEN hu.value END) AS ping,\r\n  MAX(CASE WHEN it.key_ LIKE 'icmppingloss' THEN h.value END) AS loss,\r\n  MAX(CASE WHEN it.key_ LIKE 'icmppingsec' THEN h.value END) AS response,\r\n\r\n  MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]' THEN h.value END) AS usecpu,\r\n  MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[vm.memory.util.%]' THEN h.value END) AS usememoria,\r\n  MAX(CASE WHEN it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]' THEN h.value END) AS temperatura,\r\n\r\n  MAX(CASE WHEN it.key_ LIKE '%uptime%' THEN hu.value END) AS uptime,\r\n\r\n  MAX(DATE_FORMAT(CONVERT_TZ(from_unixtime(hu.clock), '+00:00', '+00:00'), '%d-%m-%Y %H:%i:%s')) AS ultverificacao\r\n\r\nFROM items it\r\n\r\nINNER JOIN hosts ht ON ht.hostid = it.hostid\r\nINNER JOIN hosts_groups hg ON hg.hostid = ht.hostid\r\nLEFT JOIN history_uint hu ON it.itemid = hu.itemid\r\nLEFT JOIN history h ON it.itemid = h.itemid\r\n\r\nWHERE hg.groupid = 135\r\n    AND (\r\n    it.key_ LIKE 'icmpping'\r\n    OR it.key_ LIKE 'icmppingloss'\r\n    OR it.key_ LIKE 'icmppingsec'\r\n    OR it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]'\r\n    OR it.key_ LIKE 'vm.memory.util[vm.memory.util.%]'\r\n    OR it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]'\r\n    OR it.key_ LIKE '%uptime%'\r\n  )\r\n\r\nGROUP BY ht.name\r\nORDER BY ht.name;\r\n\r\n\r\n\r\n\r\n##SELECT \r\n##  ht.name AS host,\r\n\r\n  ##MAX(CASE WHEN it.key_ LIKE 'icmpping' THEN hu.value END) AS ping,\r\n  ##MAX(CASE WHEN it.key_ LIKE 'icmppingloss' THEN h.value END) AS loss,\r\n  ##MAX(CASE WHEN it.key_ LIKE 'icmppingsec' THEN h.value END) AS response,\r\n\r\n  ##MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]' THEN h.value END) AS usecpu,\r\n  ##MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[vm.memory.util.%]' THEN h.value END) AS usememoria,\r\n  ##MAX(CASE WHEN it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]' THEN h.value END) AS temperatura,\r\n\r\n  ##MAX(CASE WHEN it.key_ LIKE '%uptime%' THEN hu.value END) AS uptime,\r\n\r\n ##MAX(DATE_FORMAT(CONVERT_TZ(from_unixtime(hu.clock), '+00:00', '+00:00'), '%d-%m-%Y %H:%i:%s')) AS ultverificacao\r\n\r\n#FROM items it\r\n\r\n##INNER JOIN hosts ht ON (it.hostid = ht.hostid AND ht.name IN ($host) AND ht.status = 0)\r\n\r\n###LEFT JOIN history_uint hu ON (it.itemid = hu.itemid)\r\n#LEFT JOIN history h ON (it.itemid = h.itemid)\r\n\r\n#WHERE it.key_ LIKE '%icmpping%' \r\n #  OR it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]'\r\n  # OR it.key_ LIKE 'vm.memory.util[vm.memory.util.%]'\r\n  # OR it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]'\r\n  # OR it.key_ LIKE '%uptime%'\r\n\r\n##GROUP BY ht.name\r\n#ORDER BY ht.name;\r\n\r\n\r\n##SELECT ht.name host,\r\n##MAX(CASE WHEN it.name LIKE '%ICMP ping%' THEN hu.value END) AS 'ping',\r\n##MAX(CASE WHEN it.name LIKE '%ICMP loss%' THEN h.value END) AS 'loss',\r\n##MAX(CASE WHEN it.name LIKE '%ICMP response time%' THEN h.value END) AS 'response',\r\n##COALESCE(MAX(CASE WHEN it.name LIKE '%CPU utilization%' THEN hu.value END),MAX(CASE WHEN it.name LIKE '%0: CPU%' THEN h.value END)) AS 'usecpu',\r\n##MAX(CASE WHEN (it.name LIKE '%0: Memory%' or it.name LIKE '%Utilization%') THEN h.value END) AS 'usememoria',\r\n##MAX(CASE WHEN (it.name LIKE '%0: Temperature%' or it.name LIKE '%Mainboard - Current Temperature%' or it.name LIKE 'CPU Core - Current Temperature') THEN h.value END) AS 'temperatura',\r\n##MAX(CASE WHEN (it.name LIKE '%Device uptime%' or it.name LIKE '%Uptime (network)%') THEN hu.value END) AS 'uptime',\r\n##MAX(DATE_FORMAT(CONVERT_TZ(from_unixtime(hu.clock), '+00:00', '+00:00'), '%d-%m-%Y %H:%i:%s')) AS 'ultverificacao'\r\n##FROM items it\r\n##INNER JOIN hosts ht ON (it.hostid = ht.hostid and ht.name in ($host) and ht.status = 0)\r\n##LEFT JOIN history_uint hu ON (it.itemid = hu.itemid)\r\n##LEFT JOIN history h ON (it.itemid = h.itemid)\r\n#//LEFT JOIN (SELECT hu.itemid, MAX(hu.clock) AS max_clock FROM history_uint hu GROUP BY hu.itemid) AS max_hu ON (it.itemid = max_hu.itemid)\r\n#//LEFT JOIN history_uint hu ON (max_hu.itemid = hu.itemid AND max_hu.max_clock = hu.clock)\r\n#//LEFT JOIN (SELECT h.itemid, MAX(h.clock) AS max_clock_h FROM history h GROUP BY h.itemid) max_h ON (it.itemid = max_h.itemid)\r\n#//LEFT JOIN history h ON (max_h.itemid = h.itemid AND max_h.max_clock_h = h.clock)\r\n##WHERE (it.name like '%Uptime%' or it.name like '%Memory utilization%' or it.name like '%memoryFiveSecondsUtilization%' or it.name like '%Temperature%' or it.name like '%CPU%' or it.name like '%uptime%' or it.name like '%ICMP%' or it.name like '%Check Sessoes SSH - BEE%')\r\n##group by ht.name order by ht.name;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "rxpower": true,
+              "txpower": true,
+              "ultverificacao": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Interface": "",
+              "bitsin": "Bits In",
+              "bitsout": "Bits Out",
+              "consumoin": "Consumo In",
+              "consumoout": "Consumo Out",
+              "descartesin": "Descartes In",
+              "descartesout": "Descartes Out",
+              "errosin": "Erros In",
+              "errosout": "Erros Out",
+              "host": "Host",
+              "interface": "Interface",
+              "loss": "Loss (%)",
+              "numeroprocessos": "Processos",
+              "ping": "Ping",
+              "response": "Latency (ms)",
+              "rxpower": "Rx Power (dBm)",
+              "rxpoweravg": "Rx Power Avg (dBm)",
+              "speed": "Speed",
+              "status": "Status",
+              "statusssh": "Sessões SSH",
+              "statuszabbixagent": "Zabbix Agent",
+              "temperatura": "Temp (Cº)",
+              "txpower": "Tx Power (dBm)",
+              "txpoweravg": "Tx Power Avg (dBm)",
+              "ultverificacao": "Last Check",
+              "ultverificao": "Ult.Verificacao",
+              "uptime": "Uptime",
+              "usecpu": "CPU (%)",
+              "usememoria": "Memory (%)",
+              "usoespaco": "Temperatura (Cº)",
+              "usoin": "Uso In (%)",
+              "usoout": "Uso Out (%)"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "decydqvdzo6wwb"
+      },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 15,
+      "options": {
+        "ackEventColor": "rgb(56, 219, 156)",
+        "ackField": false,
+        "ageField": true,
+        "allowDangerousHTML": false,
+        "customLastChangeFormat": false,
+        "descriptionAtNewLine": false,
+        "descriptionField": true,
+        "fontSize": "100%",
+        "highlightBackground": false,
+        "highlightNewEvents": false,
+        "highlightNewerThan": "1h",
+        "hostField": true,
+        "hostGroups": false,
+        "hostProxy": false,
+        "hostTechNameField": false,
+        "lastChangeFormat": "",
+        "layout": "table",
+        "markAckEvents": false,
+        "okEventColor": "rgb(56, 189, 113)",
+        "opdataField": false,
+        "pageSize": 100,
+        "problemTimeline": true,
+        "resizedColumns": [
+          {
+            "id": "tags",
+            "value": 350
+          },
+          {
+            "id": "name",
+            "value": 519
+          },
+          {
+            "id": "age",
+            "value": 149
+          },
+          {
+            "id": "lastchange",
+            "value": 210
+          },
+          {
+            "id": "host",
+            "value": 140
+          }
+        ],
+        "severityField": true,
+        "showTags": false,
+        "sortProblems": "lastchange",
+        "statusField": true,
+        "statusIcon": false,
+        "triggerSeverity": [
+          {
+            "color": "rgb(108, 108, 108)",
+            "priority": 0,
+            "severity": "Not classified",
+            "show": false
+          },
+          {
+            "color": "rgb(120, 158, 183)",
+            "priority": 1,
+            "severity": "Information",
+            "show": false
+          },
+          {
+            "color": "rgb(175, 180, 36)",
+            "priority": 2,
+            "severity": "Warning",
+            "show": false
+          },
+          {
+            "color": "rgb(255, 137, 30)",
+            "priority": 3,
+            "severity": "Average",
+            "show": true
+          },
+          {
+            "color": "rgb(255, 101, 72)",
+            "priority": 4,
+            "severity": "High",
+            "show": true
+          },
+          {
+            "color": "rgb(215, 0, 0)",
+            "priority": 5,
+            "severity": "Disaster",
+            "show": true
+          }
+        ]
+      },
+      "pluginVersion": "5.0.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "decydqvdzo6wwb"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Nissan/Switches/SP"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Alerts",
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 41,
+  "tags": [
+    "switch"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Switches SP",
+  "uid": "1054d1ea-b877-4f7f-8394-4658150a041b",
+  "version": 18
+}
