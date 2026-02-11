@@ -13,3 +13,9 @@ where it.key_ in ('icmpping')
   and tg.state = 0
   and tg.value in (0,1)
   and g.name = 'Protege/' || '$base' || '/Switch';
+
+
+
+
+
+/^(Protege\/.*\/Switch)$/
