@@ -1,9 +1,9 @@
 SELECT 
   ht.name AS host,
-  MAX(CASE WHEN it.key_ LIKE 'system.cpu.util[%]' THEN h.value END) AS usecpu,
-  MAX(CASE WHEN it.key_ LIKE 'vm.memory.util[%]' THEN h.value END) AS usememoria,
-  MAX(CASE WHEN it.key_ LIKE 'sensor.temp.status[%]' THEN h.value END) AS temperatura,
-  MAX(CASE WHEN it.key_ LIKE 'system.hw.uptime' THEN hu.value END) AS uptime,
+  MAX(CASE WHEN it.key_ LIKE '%cpu utilization%' THEN h.value END) AS usecpu,
+  MAX(CASE WHEN it.key_ LIKE '%memory%' THEN h.value END) AS usememoria,
+  MAX(CASE WHEN it.key_ LIKE '%temperature%' THEN h.value END) AS temperatura,
+  MAX(CASE WHEN it.key_ LIKE '%uptime%' THEN hu.value END) AS uptime,
   MAX(TO_CHAR(
     TO_TIMESTAMP(hu.clock)::timestamp AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo', 
     'DD-MM-YYYY HH24:MI:SS'
@@ -12,13 +12,13 @@ FROM items it
 INNER JOIN hosts ht ON ht.hostid = it.hostid
 INNER JOIN hosts_groups hg ON hg.hostid = ht.hostid
 INNER JOIN hstgrp g ON g.groupid = hg.groupid
-LEFT JOIN history_uint hu ON it.itemid = hu.itemid
-LEFT JOIN history h ON it.itemid = h.itemid
+LEFT JOIN history_uint hu ON it.itemid = hu.itemid AND hu.clock > EXTRACT(EPOCH FROM NOW()) - 3600
+LEFT JOIN history h ON it.itemid = h.itemid AND h.clock > EXTRACT(EPOCH FROM NOW()) - 3600
 WHERE g.name = $base
   AND (
-    it.key_ LIKE 'system.cpu.util[cpmCPUTotal5minRev.%]'
-    OR it.key_ LIKE 'vm.memory.util[vm.memory.util.%]'
-    OR it.key_ LIKE 'sensor.temp.value[ciscoEnvMonTemperatureValue.%]'
+    it.key_ LIKE '%cpu utilization%'
+    OR it.key_ LIKE '%memory%'
+    OR it.key_ LIKE '%temperature%'
     OR it.key_ LIKE '%uptime%'
   )
 GROUP BY ht.name
