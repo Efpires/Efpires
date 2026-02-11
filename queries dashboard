@@ -1,4 +1,4 @@
-Select count(it.itemid) "Onlines" from items it
+select count(it.itemid) "Offline" from items it
 inner join hosts ht on ht.hostid = it.hostid
 inner join functions f on it.itemid = f.itemid
 inner join triggers tg on tg.triggerid = f.triggerid
@@ -10,5 +10,5 @@ where it.key_ in ('icmpping')
   and it.status = 0 
   and tg.status = 0 
   and tg.state = 0 
-  and tg.value in (0) 
+  and tg.value in (1) 
   and g.name = $base;
