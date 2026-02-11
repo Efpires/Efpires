@@ -18,6 +18,8 @@ where it.key_ in ('icmpping')
 
 
 
+db query error: pq: syntax error at or near ","
+
 
 
 select count(it.itemid) "Total"
