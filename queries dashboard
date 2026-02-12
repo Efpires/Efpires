@@ -1,57 +1,18 @@
-db query error: pq: column "protege" does not exist
-
-select count(it.itemid) "Total"
-from items it
-inner join hosts ht on ht.hostid = it.hostid
-inner join hosts_groups hg on ht.hostid = hg.hostid
-inner join hstgrp g on g.groupid = hg.groupid
-inner join functions f on it.itemid = f.itemid
-inner join triggers tg on tg.triggerid = f.triggerid
-where it.key_ in ('icmpping')
-  and ht.status = 0
-  and ht.flags in (0,4)
-  and it.status = 0
-  and tg.status = 0
-  and tg.state = 0
-  and tg.value in (0,1)
-  and g.name = $base;
-
-
-
-select count(it.itemid) "Total"
-from items it
-inner join hosts ht on ht.hostid = it.hostid
-inner join hosts_groups hg on ht.hostid = hg.hostid
-inner join hstgrp g on g.groupid = hg.groupid
-inner join functions f on it.itemid = f.itemid
-inner join triggers tg on tg.triggerid = f.triggerid
-where it.key_ in ('icmpping')
-  and ht.status = 0
-  and ht.flags in (0,4)
-  and it.status = 0
-  and tg.status = 0
-  and tg.state = 0
-  and tg.value in (0,1)
-  and g.name = '$base'
-  and ht.name = '$switch';
-
-
-
-db query error: pq: syntax error at or near "," alguens grupos estao funcionando mas outros esta dando esse erro usando a query
-select count(it.itemid) "Total"
-from items it
-inner join hosts ht on ht.hostid = it.hostid
-inner join hosts_groups hg on ht.hostid = hg.hostid
-inner join hstgrp g on g.groupid = hg.groupid
-inner join functions f on it.itemid = f.itemid
-inner join triggers tg on tg.triggerid = f.triggerid
-where it.key_ in ('icmpping')
-  and ht.status = 0
-  and ht.flags in (0,4)
-  and it.status = 0
-  and tg.status = 0
-  and tg.state = 0
-  and tg.value in (0,1)
-  and g.name = '$base'
-  and ht.name = $switch;
-
+SELECT 
+  h.name AS mpls,
+  ROUND(100 - (AVG(CASE WHEN t.value_avg = 1 THEN 100 ELSE 0 END)), 2) AS indisponibilidade,
+  ROUND(AVG(CASE WHEN t.value_avg = 1 THEN 100 ELSE 0 END), 2) AS disponibilidade
+FROM hosts h
+INNER JOIN items i ON h.hostid = i.hostid
+INNER JOIN trends t ON i.itemid = t.itemid
+INNER JOIN hosts_groups hg ON h.hostid = hg.hostid
+INNER JOIN hstgrp g ON hg.groupid = g.groupid
+WHERE 
+  i.key_ = 'icmpping'
+  AND h.status = 0
+  AND g.name = 'Protege/MPLS/Monitoramento'
+  AND t.clock BETWEEN EXTRACT(EPOCH FROM $__timeFrom())::bigint 
+                  AND EXTRACT(EPOCH FROM $__timeTo())::bigint
+GROUP BY h.name
+ORDER BY indisponibilidade DESC
+LIMIT 10;
